@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusAPI.Services", "AbacusAPI\AbacusAPI.Services.csproj", "{98C0DE98-5294-4575-B166-9CC10E7AD138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusAPI.Models", "AbacusAPI.Models\AbacusAPI.Models.csproj", "{1B39F515-41F9-4508-A402-751139B341A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusAPI.DataContext", "AbacusAPI.DataContext\AbacusAPI.DataContext.csproj", "{570977BD-53B2-4689-8BFC-758803DE892F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbacusAPI.Repositories", "AbacusAPI.Repositories\AbacusAPI.Repositories.csproj", "{0950FB2B-AEBC-4A70-B4E5-77273C1AD295}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C0DE98-5294-4575-B166-9CC10E7AD138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C0DE98-5294-4575-B166-9CC10E7AD138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C0DE98-5294-4575-B166-9CC10E7AD138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C0DE98-5294-4575-B166-9CC10E7AD138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B39F515-41F9-4508-A402-751139B341A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B39F515-41F9-4508-A402-751139B341A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B39F515-41F9-4508-A402-751139B341A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B39F515-41F9-4508-A402-751139B341A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{570977BD-53B2-4689-8BFC-758803DE892F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{570977BD-53B2-4689-8BFC-758803DE892F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{570977BD-53B2-4689-8BFC-758803DE892F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{570977BD-53B2-4689-8BFC-758803DE892F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0950FB2B-AEBC-4A70-B4E5-77273C1AD295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0950FB2B-AEBC-4A70-B4E5-77273C1AD295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0950FB2B-AEBC-4A70-B4E5-77273C1AD295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0950FB2B-AEBC-4A70-B4E5-77273C1AD295}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

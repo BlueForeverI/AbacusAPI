@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{570977BD-53B2-4689-8BFC-758803DE892F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AbacusAPI.DataContext</RootNamespace>
+    <AssemblyName>AbacusAPI.DataContext</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbacusCode.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbacusEntityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbacusEntityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbacusEntityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbacusEntityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbacusEntityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Address.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Building.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comment.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactRole.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContactTitle.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conversation.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Decile.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getOrderItemsForProcessing_Result.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceTotal.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JobDescription.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MarketingJob.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Organisation.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrganisationContact.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrganisationDetail_InSchool.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rank.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Suburb.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeOfRequest.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_schoolNameSearch_Result.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_utContentSearch_Result.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utContactLog.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utContentSearch.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utCustomer.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utOrder.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utOrderItem.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utOrderStatusChangeLog.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utPromoCode.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSchool.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSchoolGalleryImage.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSchoolName.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSchoolUser.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSendToFriendLog.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utShoppingCart.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utShoppingCartItem.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utShoppingCartItemBackup.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSPImage.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSPOrder.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="utSPReorderItem.cs">
+      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AbacusEntityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AbacusEntityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AbacusEntityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AbacusEntityModel.edmx</DependentUpon>
+      <LastGenOutput>AbacusEntityModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AbacusEntityModel.edmx.diagram">
+      <DependentUpon>AbacusEntityModel.edmx</DependentUpon>
+    </None>
+    <None Include="AbacusEntityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AbacusEntityModel.edmx</DependentUpon>
+      <LastGenOutput>AbacusEntityModel.cs</LastGenOutput>
+    </None>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AbacusAPI.DataContext.dll">
+      <publishTime>06/18/2014 21:07:00</publishTime>
+    </File>
+    <File Include="bin/AbacusAPI.dll">
+      <publishTime>06/18/2014 21:07:01</publishTime>
+    </File>
+    <File Include="bin/AbacusAPI.Models.dll">
+      <publishTime>06/18/2014 21:07:00</publishTime>
+    </File>
+    <File Include="bin/AbacusAPI.Repositories.dll">
+      <publishTime>06/18/2014 21:07:01</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/11/2014 21:16:15</publishTime>
+    </File>
+    <File Include="OrdersService.svc">
+      <publishTime>06/14/2014 22:43:10</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/18/2014 21:07:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
