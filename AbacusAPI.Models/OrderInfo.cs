@@ -86,5 +86,23 @@ namespace AbacusAPI.Models
 
         [DataMember]
         public DateTime? InvoicedDate { get; set; }
+
+        [DataMember]
+        public string OrderType { get; set; }
+
+        [DataMember]
+        public Guid OrderItemId { get; set; }
+
+        [DataMember]
+        public Guid OrderId { get; set; }
+
+        [DataMember]
+        public Guid ReorderItemId { get; set; }
+
+        [DataMember]
+        public Guid SchoolNameId { get; set; }
+
+        [DataMember]
+        public Guid SPOrderId { get; set; }
     }
 }

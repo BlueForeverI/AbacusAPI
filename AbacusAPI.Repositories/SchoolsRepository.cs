@@ -16,12 +16,7 @@ namespace AbacusAPI.Repositories
             {
                 return context.utSchoolNames
                     .Where(s => s.Name.ToLower().Contains(searchPhrase.ToLower()))
-                    .Select(s => new School()
-                                     {
-                                         Id = s.Id,
-                                         Code = s.Code,
-                                         Name = s.Name
-                                     }).ToList();
+                    .Select(GetSchoolFromEntity).ToList();
             }
         }
 
@@ -30,16 +25,21 @@ namespace AbacusAPI.Repositories
             using(AbacusEntities context = new AbacusEntities())
             {
                 utSchoolName entity = context.utSchoolNames.SingleOrDefault(s => s.Id == id);
-                return new School()
-                           {
-                               Id = entity.Id,
-                               Code = entity.Code,
-                               Name = entity.Name,
-                               Street = entity.Street,
-                               Suburb = entity.Suburb,
-                               Town = entity.Town
-                           };
+                return GetSchoolFromEntity(entity);
             }
+        }
+
+        private School GetSchoolFromEntity(utSchoolName entity)
+        {
+            return new School()
+            {
+                Id = entity.Id,
+                Code = entity.Code,
+                Name = entity.Name,
+                Street = entity.Street,
+                Suburb = entity.Suburb,
+                Town = entity.Town
+            };
         }
     }
 }

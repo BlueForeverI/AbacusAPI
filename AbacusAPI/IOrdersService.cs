@@ -26,5 +26,11 @@ namespace AbacusAPI
 
         [OperationContract]
         IEnumerable<OrderInfo> GetOrdersGoodAndYellow();
+
+        [OperationContract]
+        IEnumerable<OrderInfo> SearchOrders(string searchText);
+
+        [OperationContract]
+        void EditOrder(OrderInfo order);
     }
 }

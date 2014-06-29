@@ -9,20 +9,21 @@ namespace AbacusAPI.Repositories
 {
     public class OrderInfoRepository
     {
-        public IQueryable<OrderInfo> GetAllOrders()
+        private IQueryable<OrderInfo> GetOrders(string condition)
         {
-            using(AbacusEntities context = new AbacusEntities())
+            using (var context = new AbacusEntities())
             {
-                List<OrderInfo> result = new List<OrderInfo>();
-                SqlConnection abacusConnection = new SqlConnection(context.Database.Connection.ConnectionString);
+                var result = new List<OrderInfo>();
+                var abacusConnection = new SqlConnection(context.Database.Connection.ConnectionString);
                 abacusConnection.Open();
-                SqlCommand command = new SqlCommand(GetOrderInfoQuery, abacusConnection);
+                string query = String.Format(GetOrderInfoQuery, condition);
+                var command = new SqlCommand(query, abacusConnection);
                 SqlDataReader reader = command.ExecuteReader();
 
-                while(reader.Read())
+                while (reader.Read())
                 {
                     OrderInfo currentOrderInfo = GetOrderInfoFromReader(reader);
-                    if(currentOrderInfo != null)
+                    if (currentOrderInfo != null)
                     {
                         result.Add(currentOrderInfo);
                     }
@@ -30,6 +31,11 @@ namespace AbacusAPI.Repositories
 
                 return result.AsQueryable();
             }
+        }
+
+        public IQueryable<OrderInfo> GetAllOrders()
+        {
+            return GetOrders("1 = 1");
         }
 
         public IQueryable<OrderInfo> GetOrdersNoSchoolCode()
@@ -45,14 +51,14 @@ namespace AbacusAPI.Repositories
 
         public IQueryable<OrderInfo> GetOrdersZeroQuantities()
         {
-            return GetAllOrders().Where(o => o.Calcs == 0 && o.Cards == 0 && o.Diary == 0);
+            return GetOrders("oi.Quantity = 0");
         }
 
         public IQueryable<OrderInfo> GetOrdersGoodAndRed()
         {
             return GetAllOrders()
                 .Where(o => o.Status == "Good" && o.CustomerOrderStatus == "Has been invoiced")
-                .Where(o => !(o.Calcs == 0 && o.Cards == 0 && o.Diary == 0));                
+                .Where(o => !(o.Calcs == 0 && o.Cards == 0 && o.Diary == 0));
         }
 
         public IQueryable<OrderInfo> GetOrdersGoodAndYellow()
@@ -60,7 +66,52 @@ namespace AbacusAPI.Repositories
 
             return GetAllOrders()
                 .Where(o => o.Status == "Good" && o.CustomerOrderStatus == "Has ordered paper")
-                .Where(o => !(o.Calcs == 0 && o.Cards == 0 && o.Diary == 0));                
+                .Where(o => !(o.Calcs == 0 && o.Cards == 0 && o.Diary == 0));
+        }
+
+        public IEnumerable<OrderInfo> SearchOrders(string searchText)
+        {
+            return GetAllOrders()
+                .Where(o =>
+                    o.Status.ToLower().Contains(searchText) ||
+                    o.Email.ToLower().Contains(searchText) ||
+                    o.Name.ToLower().Contains(searchText) ||
+                    o.Phone.ToLower().Contains(searchText) ||
+                    o.Code.ToLower().Contains(searchText) ||
+                    o.School.ToLower().Contains(searchText) ||
+                    o.Address.ToLower().Contains(searchText) ||
+                    o.KidsName.ToLower().Contains(searchText) ||
+                    o.Room.ToLower().Contains(searchText) ||
+                    o.Comment.ToLower().Contains(searchText) ||
+                    o.Country.ToLower().Contains(searchText));
+        }
+
+        public void EditOrder(OrderInfo order)
+        {
+            using (var context = new AbacusEntities())
+            {
+                utOrderItem orderItem = context.utOrderItems.SingleOrDefault(o => o.Id == order.OrderItemId);
+                utSPOrder spOrder = context.utSPOrders.SingleOrDefault(o => o.Id == order.SPOrderId);
+
+                if (orderItem.ItemType == "Cards")
+                {
+                    orderItem.Quantity = (int)order.Cards;
+                }
+
+                if (orderItem.ItemType == "Calendars")
+                {
+                    orderItem.Quantity = (int)order.Calcs;
+                }
+
+                if (orderItem.ItemType == "Diaries")
+                {
+                    orderItem.Quantity = (int)order.Diary;
+                }
+
+                spOrder.StudentClass = order.Room;
+
+                context.SaveChanges();
+            }
         }
 
         private OrderInfo GetOrderInfoFromReader(SqlDataReader reader)
@@ -69,48 +120,70 @@ namespace AbacusAPI.Repositories
             decimal qtyCalendars = (reader["QtyCalendar"].ToString() == "") ? 0 : decimal.Parse(reader["QtyCalendar"].ToString());
             decimal qtyDiaries = (reader["QtyDiary"].ToString() == "") ? 0 : decimal.Parse(reader["QtyDiary"].ToString());
 
-            if (qtyCard + +qtyCalendars + qtyDiaries > 0)
+            OrderInfo order = new OrderInfo();
+
+            order.ImageId = (reader["ImageID"].ToString() == "") ? 0 : long.Parse(reader["ImageID"].ToString());
+            order.Status = reader["Status"].ToString();
+            order.Email = reader["Submittermail"].ToString();
+            order.Name = reader["SubmitterName"].ToString();
+            order.Phone = reader["SubmitterPhone"].ToString();
+            order.Code = reader["SchoolCode"].ToString();
+            order.School = reader["SchoolName"].ToString();
+            order.Address = reader["SchoolAddress"].ToString();
+            order.KidsName = reader["KidsName"].ToString();
+            order.Room = reader["KidsRoom"].ToString();
+            order.Cards = qtyCard;
+            order.Calcs = qtyCalendars;
+            order.Diary = qtyDiaries;
+            order.Comment = reader["Comment"].ToString();
+            order.Country = reader["Country"].ToString();
+            order.PrintedId = reader["PrintedImageId"].ToString();
+            order.ReOrder = reader["ReOrderImage"].ToString();
+            order.BatchBy = reader["BatchBy"].ToString();
+            order.Batch = reader["BatchNo"].ToString();
+            order.DiaryCrop = reader["DiaryCrop"].ToString();
+            order.AuthCode = reader["AuthCode"].ToString();
+            order.BatchDate = (!String.IsNullOrEmpty(reader["BatchDate"].ToString()))
+                ? (DateTime?)DateTime.Parse(reader["BatchDate"].ToString())
+                : null;
+
+            order.CustomerOrderStatus = reader["CustomerOrderStatus"].ToString();
+            order.InvoicedDate = (!String.IsNullOrEmpty(reader["InvoicedDate"].ToString()))
+                ? (DateTime?)DateTime.Parse(reader["InvoicedDate"].ToString())
+                : null;
+
+            order.Vertical = (reader["Vertical"].ToString() != "0") && bool.Parse(reader["Vertical"].ToString());
+            order.ContactName = reader["ContactName"].ToString();
+            order.Log = reader["Log"].ToString();
+            order.OrderType = reader["OrderType"].ToString();
+            order.OrderItemId = GetGuidFromObject(reader["UtOrderItemId"]);
+            order.OrderId = GetGuidFromObject(reader["UtOrderId"]);
+            order.ReorderItemId = GetGuidFromObject(reader["UtSPReorderItemId"]);
+            order.SchoolNameId = GetGuidFromObject(reader["utSchoolNameId"]);
+            order.SPOrderId = GetGuidFromObject(reader["utSPOrderId"]);
+
+            return order;
+        }
+
+        private Guid GetGuidFromObject(object parameter)
+        {
+            if (parameter == null || String.IsNullOrEmpty(parameter.ToString()))
             {
-                OrderInfo order = new OrderInfo();
-
-                order.ImageId = (reader["ImageID"].ToString() == "") ? 0 : long.Parse(reader["ImageID"].ToString());
-                order.Status = reader["Status"].ToString();
-                order.Email = reader["Submittermail"].ToString();
-                order.Name = reader["SubmitterName"].ToString();
-                order.Phone = reader["SubmitterPhone"].ToString();
-                order.Code = reader["SchoolCode"].ToString();
-                order.School = reader["SchoolName"].ToString();
-                order.Address = reader["SchoolAddress"].ToString();
-                order.KidsName = reader["KidsName"].ToString();
-                order.Room = reader["KidsRoom"].ToString();
-                order.Cards = qtyCard;
-                order.Calcs = qtyCalendars;
-                order.Diary = qtyDiaries;
-                order.Comment = reader["Comment"].ToString();
-                order.Country = reader["Country"].ToString();
-                order.PrintedId = reader["PrintedImageId"].ToString();
-                order.ReOrder = reader["ReOrderImage"].ToString();
-                order.BatchBy = reader["BatchBy"].ToString();
-                order.Batch = reader["BatchNo"].ToString();
-                order.DiaryCrop = reader["DiaryCrop"].ToString();
-                order.AuthCode = reader["AuthCode"].ToString();
-                order.BatchDate = (!String.IsNullOrEmpty(reader["BatchDate"].ToString())) 
-                    ? (DateTime?)DateTime.Parse(reader["BatchDate"].ToString()) 
-                    : null;
-
-                order.CustomerOrderStatus = reader["CustomerOrderStatus"].ToString();
-                order.InvoicedDate = (!String.IsNullOrEmpty(reader["InvoicedDate"].ToString())) 
-                    ? (DateTime?)DateTime.Parse(reader["InvoicedDate"].ToString()) 
-                    : null;
-
-                order.Vertical = (reader["Vertical"].ToString() != "0") && bool.Parse(reader["Vertical"].ToString());
-                order.ContactName = reader["ContactName"].ToString();
-                order.Log = reader["Log"].ToString();
-
-                return order;
+                return Guid.Empty;
             }
 
-            return null;
+            Guid result;
+            try
+            {
+
+                result = Guid.Parse(parameter.ToString());
+            }
+            catch (Exception)
+            {
+                result = Guid.Empty;
+            }
+
+            return result;
         }
 
         private string GetOrderInfoQuery
@@ -155,20 +228,27 @@ namespace AbacusAPI.Repositories
                 query += " '' [DiaryCrop],   ";
                 query += " '' [ContactName],   ";
                 query += " '' [Comment],   ";
-                query += " '' [Log]   ";
+                query += " '' [Log],   ";
+                query += " oi.ItemType as [OrderType], ";
+                query += " oi.Id [UtOrderItemId], ";
+                query += " od.Id [UtOrderId], ";
+                query += " ro.Id [UtSPReorderItemId], ";
+                query += " sn.Id [utSchoolNameId]	  , ";
+                query += "o.Id [utSPOrderId] ";
                 query += " FROM utSPOrder o  (nolock) ";
                 query += "         INNER JOIN utOrderItem oi (nolock) ON o.Id=oi.OrderId   ";
                 query += "         LEFT JOIN utOrder od (nolock) ON oi.OrderId = od.Id   ";
                 query += "         LEFT JOIN utSPReorderItems ro (nolock) ON o.Id = ro.OrderID   ";
                 query += "         LEFT JOIN utSchoolNames sn (nolock) ON o.OrganisationName = sn.Name  ";
-                query += " WHERE o.Finalised=1    ";
+                query += " WHERE o.Finalised=1    AND {0} ";
                 query += " GROUP BY oi.Id, o.OrderNumber , oi.ItemType, o.SchoolCode, sn.Code,  ";
                 query += "          o.OrganisationName, sn.Name, o.DeliveryAddress,   ";
                 query += "          o.StudentName , o.StudentClass, o.Name, o.Email,   ";
                 query += "          o.PhoneArea, o.Phone, od.PaymentGatewayReference,   ";
-                query += "          ro.ImageNumber,oi.Quantity ";
+                query += "          ro.ImageNumber,oi.Quantity, od.Id, ro.Id, sn.Id, o.Id ";
                 return query;
             }
         }
+
     }
 }

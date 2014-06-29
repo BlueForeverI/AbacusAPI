@@ -42,5 +42,17 @@ namespace AbacusAPI
             var repo = new OrderInfoRepository();
             return repo.GetOrdersGoodAndYellow();
         }
+
+        public IEnumerable<OrderInfo> SearchOrders(string searchText)
+        {
+            var repo = new OrderInfoRepository();
+            return repo.SearchOrders(searchText);
+        }
+
+        public void EditOrder(OrderInfo order)
+        {
+            var repo = new OrderInfoRepository();
+            repo.EditOrder(order);
+        }
     }
 }
