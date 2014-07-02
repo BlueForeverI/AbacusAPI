@@ -31,6 +31,9 @@ namespace AbacusAPI
         IEnumerable<OrderInfo> SearchOrders(string searchText);
 
         [OperationContract]
+        void AssignSchoolToOrder(School school, OrderInfo order);
+
+        [OperationContract]
         void EditOrder(OrderInfo order);
     }
 }

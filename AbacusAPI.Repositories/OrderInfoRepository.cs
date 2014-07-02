@@ -86,6 +86,17 @@ namespace AbacusAPI.Repositories
                     o.Country.ToLower().Contains(searchText));
         }
 
+        public void AssignSchoolToOrder(School school, OrderInfo order)
+        {
+            using(var context = new AbacusEntities())
+            {
+                utSPOrder orderEntity = context.utSPOrders.SingleOrDefault(o => o.Id == order.SPOrderId);
+                orderEntity.SchoolCode = (int)school.Code;
+                orderEntity.OrganisationName = school.Name;
+                context.SaveChanges();
+            }
+        }
+
         public void EditOrder(OrderInfo order)
         {
             using (var context = new AbacusEntities())
@@ -249,6 +260,7 @@ namespace AbacusAPI.Repositories
                 return query;
             }
         }
+
 
     }
 }

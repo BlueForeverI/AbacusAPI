@@ -49,6 +49,12 @@ namespace AbacusAPI
             return repo.SearchOrders(searchText);
         }
 
+        public void AssignSchoolToOrder(School school, OrderInfo order)
+        {
+            var repo = new OrderInfoRepository();
+            repo.AssignSchoolToOrder(school, order);
+        }
+
         public void EditOrder(OrderInfo order)
         {
             var repo = new OrderInfoRepository();
