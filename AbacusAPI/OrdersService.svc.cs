@@ -60,5 +60,11 @@ namespace AbacusAPI
             var repo = new OrderInfoRepository();
             repo.EditOrder(order);
         }
+
+        public IEnumerable<OrderChangeLog> GetOrderChangeHistory()
+        {
+            var repo = new OrderInfoRepository();
+            return repo.GetOrderChangeHistory();
+        }
     }
 }

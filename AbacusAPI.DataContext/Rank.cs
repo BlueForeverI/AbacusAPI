@@ -14,16 +14,9 @@ namespace AbacusAPI.DataContext
     
     public partial class Rank
     {
-        public Rank()
-        {
-            this.Organisations = new HashSet<Organisation>();
-        }
-    
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }
-    
-        public virtual ICollection<Organisation> Organisations { get; set; }
     }
 }

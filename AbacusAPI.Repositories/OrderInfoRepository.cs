@@ -91,9 +91,27 @@ namespace AbacusAPI.Repositories
             using(var context = new AbacusEntities())
             {
                 utSPOrder orderEntity = context.utSPOrders.SingleOrDefault(o => o.Id == order.SPOrderId);
+                OrdersChangeLog logEntry = new OrdersChangeLog();
+                logEntry.Id = Guid.NewGuid();
+                logEntry.ImageId = order.ImageId;
+                logEntry.OrderType = order.OrderType;
+
+                int quantity = (order.OrderType == "Calendars")
+                                   ? (int) order.Calcs
+                                   : ((order.OrderType == "Cards" ? (int)order.Cards : (int)order.Diary));
+
+                logEntry.OldQuantity = quantity;
+                logEntry.NewQuantity = quantity;
+                logEntry.OldRoom = order.Room;
+                logEntry.NewRoom = order.Room;
+                logEntry.OldSchoolCode = orderEntity.SchoolCode ?? 0;
+                logEntry.NewSchoolCode = (int) school.Code;
+
                 orderEntity.SchoolCode = (int)school.Code;
                 orderEntity.OrganisationName = school.Name;
                 context.SaveChanges();
+
+                InsertChangeLogEntry(logEntry);
             }
         }
 
@@ -103,6 +121,13 @@ namespace AbacusAPI.Repositories
             {
                 utOrderItem orderItem = context.utOrderItems.SingleOrDefault(o => o.Id == order.OrderItemId);
                 utSPOrder spOrder = context.utSPOrders.SingleOrDefault(o => o.Id == order.SPOrderId);
+                OrdersChangeLog logEntry = new OrdersChangeLog();
+                logEntry.Id = Guid.NewGuid();
+                logEntry.OldQuantity = orderItem.Quantity;
+                logEntry.OrderType = orderItem.ItemType;
+                logEntry.ImageId = (int)order.ImageId;
+                logEntry.OldSchoolCode = int.Parse(order.Code);
+                logEntry.NewSchoolCode = int.Parse(order.Code);
 
                 if (orderItem.ItemType == "Cards")
                 {
@@ -119,8 +144,23 @@ namespace AbacusAPI.Repositories
                     orderItem.Quantity = (int)order.Diary;
                 }
 
+                logEntry.NewQuantity = orderItem.Quantity;
+                logEntry.OldRoom = spOrder.StudentClass;
+                logEntry.NewRoom = order.Room;
+
+                InsertChangeLogEntry(logEntry);
+                
                 spOrder.StudentClass = order.Room;
 
+                context.SaveChanges();
+            }
+        }
+
+        private void InsertChangeLogEntry(OrdersChangeLog entry)
+        {
+            using(var context = new AbacusEntities())
+            {
+                context.OrdersChangeLogs.Add(entry);
                 context.SaveChanges();
             }
         }
@@ -262,5 +302,24 @@ namespace AbacusAPI.Repositories
         }
 
 
+
+        public IEnumerable<OrderChangeLog> GetOrderChangeHistory()
+        {
+            using(var context = new AbacusEntities())
+            {
+                return context.OrdersChangeLogs.Select(c => new OrderChangeLog()
+                                                                {
+                                                                    Id = c.Id,
+                                                                    ImageId = c.ImageId,
+                                                                    NewQuantity = c.NewQuantity,
+                                                                    NewRoom = c.NewRoom,
+                                                                    NewSchoolCode = c.NewSchoolCode,
+                                                                    OldQuantity = c.OldQuantity,
+                                                                    OldRoom = c.OldRoom,
+                                                                    OldSchoolCode = c.OldSchoolCode,
+                                                                    OrderType = c.OrderType
+                                                                }).ToList();
+            }
+        }
     }
 }

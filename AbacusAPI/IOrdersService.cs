@@ -35,5 +35,8 @@ namespace AbacusAPI
 
         [OperationContract]
         void EditOrder(OrderInfo order);
+
+        [OperationContract]
+        IEnumerable<OrderChangeLog> GetOrderChangeHistory();
     }
 }

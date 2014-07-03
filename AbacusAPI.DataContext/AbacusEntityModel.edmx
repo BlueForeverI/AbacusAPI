@@ -4,269 +4,22 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AbacusDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AbacusDbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="AbacusDbModelStoreContainer">
-          <EntitySet Name="AbacusCodes" EntityType="AbacusDbModel.Store.AbacusCodes" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Addresses" EntityType="AbacusDbModel.Store.Addresses" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Buildings" EntityType="AbacusDbModel.Store.Buildings" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Cities" EntityType="AbacusDbModel.Store.Cities" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Comments" EntityType="AbacusDbModel.Store.Comments" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ContactRoles" EntityType="AbacusDbModel.Store.ContactRoles" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Contacts" EntityType="AbacusDbModel.Store.Contacts" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ContactTitles" EntityType="AbacusDbModel.Store.ContactTitles" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Conversations" EntityType="AbacusDbModel.Store.Conversations" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Countries" EntityType="AbacusDbModel.Store.Countries" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Deciles" EntityType="AbacusDbModel.Store.Deciles" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="InvoiceTotals" EntityType="AbacusDbModel.Store.InvoiceTotals" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="JobDescriptions" EntityType="AbacusDbModel.Store.JobDescriptions" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="MarketingJobs" EntityType="AbacusDbModel.Store.MarketingJobs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="OrganisationContacts" EntityType="AbacusDbModel.Store.OrganisationContacts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrdersChangeLog" EntityType="AbacusDbModel.Store.OrdersChangeLog" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="OrganisationDetail_InSchool" EntityType="AbacusDbModel.Store.OrganisationDetail_InSchool" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Organisations" EntityType="AbacusDbModel.Store.Organisations" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ProductMarketingJobs" EntityType="AbacusDbModel.Store.ProductMarketingJobs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Products" EntityType="AbacusDbModel.Store.Products" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Programs" EntityType="AbacusDbModel.Store.Programs" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Ranks" EntityType="AbacusDbModel.Store.Ranks" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Roles" EntityType="AbacusDbModel.Store.Roles" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="States" EntityType="AbacusDbModel.Store.States" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Suburbs" EntityType="AbacusDbModel.Store.Suburbs" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TypeOfRequestPrograms" EntityType="AbacusDbModel.Store.TypeOfRequestPrograms" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="TypeOfRequests" EntityType="AbacusDbModel.Store.TypeOfRequests" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utContactLog" EntityType="AbacusDbModel.Store.utContactLog" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utContentSearch" EntityType="AbacusDbModel.Store.utContentSearch" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utCustomer" EntityType="AbacusDbModel.Store.utCustomer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utOrder" EntityType="AbacusDbModel.Store.utOrder" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utOrderItem" EntityType="AbacusDbModel.Store.utOrderItem" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utOrderStatusChangeLog" EntityType="AbacusDbModel.Store.utOrderStatusChangeLog" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utPromoCode" EntityType="AbacusDbModel.Store.utPromoCode" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utSchool" EntityType="AbacusDbModel.Store.utSchool" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utSchoolGalleryImage" EntityType="AbacusDbModel.Store.utSchoolGalleryImage" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utSchoolNames" EntityType="AbacusDbModel.Store.utSchoolNames" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utSchoolUser" EntityType="AbacusDbModel.Store.utSchoolUser" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utSendToFriendLog" EntityType="AbacusDbModel.Store.utSendToFriendLog" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utShoppingCart" EntityType="AbacusDbModel.Store.utShoppingCart" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utShoppingCartItem" EntityType="AbacusDbModel.Store.utShoppingCartItem" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="utShoppingCartItemBackup" EntityType="AbacusDbModel.Store.utShoppingCartItemBackup" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utSPImage" EntityType="AbacusDbModel.Store.utSPImage" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utSPOrder" EntityType="AbacusDbModel.Store.utSPOrder" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="utSPReorderItems" EntityType="AbacusDbModel.Store.utSPReorderItems" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Buildings_BuildingId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_Buildings_BuildingId">
-            <End Role="Buildings" EntitySet="Buildings" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Cities_CityId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_Cities_CityId">
-            <End Role="Cities" EntitySet="Cities" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Contacts_ContactId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_Contacts_ContactId">
-            <End Role="Contacts" EntitySet="Contacts" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Countries_CountryId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_Countries_CountryId">
-            <End Role="Countries" EntitySet="Countries" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Organisations_OrganisationId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_States_StateId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_States_StateId">
-            <End Role="States" EntitySet="States" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Suburbs_SuburbId" Association="AbacusDbModel.Store.FK_dbo_Addresses_dbo_Suburbs_SuburbId">
-            <End Role="Suburbs" EntitySet="Suburbs" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Cities_dbo_Countries_Country_Id" Association="AbacusDbModel.Store.FK_dbo_Cities_dbo_Countries_Country_Id">
-            <End Role="Countries" EntitySet="Countries" />
-            <End Role="Cities" EntitySet="Cities" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_ContactRoles_dbo_Roles_Role_Id" Association="AbacusDbModel.Store.FK_dbo_ContactRoles_dbo_Roles_Role_Id">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="ContactRoles" EntitySet="ContactRoles" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId" Association="AbacusDbModel.Store.FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId">
-            <End Role="ContactTitles" EntitySet="ContactTitles" />
-            <End Role="Contacts" EntitySet="Contacts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Contacts_dbo_Organisations_OrganisationId" Association="AbacusDbModel.Store.FK_dbo_Contacts_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="Contacts" EntitySet="Contacts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Contacts_dbo_Roles_RoleId" Association="AbacusDbModel.Store.FK_dbo_Contacts_dbo_Roles_RoleId">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="Contacts" EntitySet="Contacts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Conversations_dbo_Contacts_ContactId" Association="AbacusDbModel.Store.FK_dbo_Conversations_dbo_Contacts_ContactId">
-            <End Role="Contacts" EntitySet="Contacts" />
-            <End Role="Conversations" EntitySet="Conversations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Conversations_dbo_Organisations_OrganisationId" Association="AbacusDbModel.Store.FK_dbo_Conversations_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="Conversations" EntitySet="Conversations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId" Association="AbacusDbModel.Store.FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="InvoiceTotals" EntitySet="InvoiceTotals" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Addresses_AddressId" Association="AbacusDbModel.Store.FK_dbo_MarketingJobs_dbo_Addresses_AddressId">
-            <End Role="Addresses" EntitySet="Addresses" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Contacts_ContactId" Association="AbacusDbModel.Store.FK_dbo_MarketingJobs_dbo_Contacts_ContactId">
-            <End Role="Contacts" EntitySet="Contacts" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId" Association="AbacusDbModel.Store.FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Programs_ProgramId" Association="AbacusDbModel.Store.FK_dbo_MarketingJobs_dbo_Programs_ProgramId">
-            <End Role="Programs" EntitySet="Programs" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId" Association="AbacusDbModel.Store.FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId">
-            <End Role="TypeOfRequests" EntitySet="TypeOfRequests" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id" Association="AbacusDbModel.Store.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="OrganisationDetail_InSchool" EntitySet="OrganisationDetail_InSchool" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id" Association="AbacusDbModel.Store.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="OrganisationDetail_InSchool" EntitySet="OrganisationDetail_InSchool" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Organisations_dbo_Deciles_DecileId" Association="AbacusDbModel.Store.FK_dbo_Organisations_dbo_Deciles_DecileId">
-            <End Role="Deciles" EntitySet="Deciles" />
-            <End Role="Organisations" EntitySet="Organisations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Organisations_dbo_Ranks_RankId" Association="AbacusDbModel.Store.FK_dbo_Organisations_dbo_Ranks_RankId">
-            <End Role="Ranks" EntitySet="Ranks" />
-            <End Role="Organisations" EntitySet="Organisations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_ProductMarketingJobs_dbo_MarketingJobs_MarketingJob_Id" Association="AbacusDbModel.Store.FK_dbo_ProductMarketingJobs_dbo_MarketingJobs_MarketingJob_Id">
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-            <End Role="ProductMarketingJobs" EntitySet="ProductMarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_ProductMarketingJobs_dbo_Products_Product_Id" Association="AbacusDbModel.Store.FK_dbo_ProductMarketingJobs_dbo_Products_Product_Id">
-            <End Role="Products" EntitySet="Products" />
-            <End Role="ProductMarketingJobs" EntitySet="ProductMarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_TypeOfRequestPrograms_dbo_Programs_Program_Id" Association="AbacusDbModel.Store.FK_dbo_TypeOfRequestPrograms_dbo_Programs_Program_Id">
-            <End Role="Programs" EntitySet="Programs" />
-            <End Role="TypeOfRequestPrograms" EntitySet="TypeOfRequestPrograms" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_TypeOfRequestPrograms_dbo_TypeOfRequests_TypeOfRequest_Id" Association="AbacusDbModel.Store.FK_dbo_TypeOfRequestPrograms_dbo_TypeOfRequests_TypeOfRequest_Id">
-            <End Role="TypeOfRequests" EntitySet="TypeOfRequests" />
-            <End Role="TypeOfRequestPrograms" EntitySet="TypeOfRequestPrograms" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="AbacusCodes">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="Addresses">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="BuildingId" Type="int" />
-          <Property Name="Street" Type="nvarchar(max)" />
-          <Property Name="SuburbId" Type="int" />
-          <Property Name="CityId" Type="int" />
-          <Property Name="StateId" Type="int" />
-          <Property Name="CountryId" Type="int" />
-          <Property Name="PostCode" Type="nvarchar(max)" />
-          <Property Name="IsDelivery" Type="bit" Nullable="false" />
-          <Property Name="ContactId" Type="int" />
-          <Property Name="OrganisationId" Type="int" />
-          <Property Name="MarketingJobId" Type="int" />
-        </EntityType>
-        <EntityType Name="Buildings">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Active" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Cities">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Country_Id" Type="int" />
-        </EntityType>
-        <EntityType Name="Comments">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Text" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="ContactRoles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="int" Nullable="false" />
-          <Property Name="Role_Id" Type="int" />
-        </EntityType>
-        <EntityType Name="Contacts">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="nvarchar(max)" />
-          <Property Name="LastName" Type="nvarchar(max)" />
-          <Property Name="ContactTitleId" Type="int" />
-          <Property Name="PhoneDay" Type="nvarchar(max)" />
-          <Property Name="PhoneAfterHours" Type="nvarchar(max)" />
-          <Property Name="PhoneCell" Type="nvarchar(max)" />
-          <Property Name="EmailWork" Type="nvarchar(max)" />
-          <Property Name="IsPrimaryEmailWork" Type="bit" Nullable="false" />
-          <Property Name="EmailPersonal" Type="nvarchar(max)" />
-          <Property Name="IsPrimaryEmailPersonal" Type="bit" Nullable="false" />
-          <Property Name="OrganisationId" Type="int" />
-          <Property Name="RoleId" Type="int" />
-        </EntityType>
-        <EntityType Name="ContactTitles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ContactTitleType" Type="int" Nullable="false" />
-          <Property Name="Other" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="Conversations">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ContactId" Type="int" Nullable="false" />
-          <Property Name="OrganisationId" Type="int" Nullable="false" />
-          <Property Name="ContactType" Type="nvarchar(max)" />
-          <Property Name="ConversationJobNumber" Type="nvarchar(max)" />
-          <Property Name="ConversationText" Type="nvarchar" />
-          <Property Name="HasTask" Type="bit" />
-          <Property Name="Active" Type="bit" Nullable="false" />
-          <Property Name="Created" Type="datetime" Nullable="false" />
-          <Property Name="UserCreatedId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Countries">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Code" Type="nvarchar(max)" />
-        </EntityType>
         <EntityType Name="Deciles">
           <Key>
             <PropertyRef Name="Id" />
@@ -275,64 +28,19 @@
           <Property Name="Name" Type="nvarchar(max)" />
           <Property Name="Active" Type="bit" Nullable="false" />
         </EntityType>
-        <EntityType Name="InvoiceTotals">
+        <EntityType Name="OrdersChangeLog">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Gross" Type="decimal" Nullable="false" Scale="2" />
-          <Property Name="Qty" Type="decimal" Nullable="false" Scale="2" />
-          <Property Name="OrderedQty" Type="decimal" Nullable="false" Scale="2" />
-          <Property Name="Year" Type="int" Nullable="false" />
-          <Property Name="OrganisationId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="JobDescriptions">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Description" Type="nvarchar(max)" />
-          <Property Name="Active" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="MarketingJobs">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Barcode" Type="nvarchar(max)" />
-          <Property Name="OrganisationId" Type="int" Nullable="false" />
-          <Property Name="ContactId" Type="int" Nullable="false" />
-          <Property Name="AddressId" Type="int" Nullable="false" />
-          <Property Name="Title" Type="nvarchar(max)" />
-          <Property Name="ProgramId" Type="int" Nullable="false" />
-          <Property Name="TypeOfRequestId" Type="int" Nullable="false" />
-          <Property Name="OrderForm" Type="int" Nullable="false" />
-          <Property Name="IsSamples" Type="bit" Nullable="false" />
-          <Property Name="IsPosters" Type="bit" Nullable="false" />
-          <Property Name="RequestDeliveryDate" Type="datetime" Nullable="false" />
-          <Property Name="IndicativeOrderReturn" Type="datetime" Nullable="false" />
-          <Property Name="LastDayOfSchoolYear" Type="datetime" Nullable="false" />
-          <Property Name="LogoId" Type="int" Nullable="false" />
-          <Property Name="DeliveryInstructions" Type="nvarchar(max)" />
-          <Property Name="Notes" Type="nvarchar(max)" />
-          <Property Name="Smencils" Type="bit" Nullable="false" />
-          <Property Name="Online" Type="bit" Nullable="false" />
-          <Property Name="CreatedUserId" Type="int" Nullable="false" />
-          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
-          <Property Name="SubmittedUserId" Type="int" Nullable="false" />
-          <Property Name="SubmittedDate" Type="datetime" Nullable="false" />
-          <Property Name="JobStatus" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="OrganisationContacts">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="OfficePhone" Type="nvarchar(max)" />
-          <Property Name="OfficeFax" Type="nvarchar(max)" />
-          <Property Name="OfficeEmail" Type="nvarchar(max)" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ImageId" Type="bigint" Nullable="false" />
+          <Property Name="OrderType" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="OldQuantity" Type="int" Nullable="false" />
+          <Property Name="NewQuantity" Type="int" Nullable="false" />
+          <Property Name="OldSchoolCode" Type="bigint" Nullable="false" />
+          <Property Name="NewSchoolCode" Type="bigint" Nullable="false" />
+          <Property Name="OldRoom" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="NewRoom" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="OrganisationDetail_InSchool">
           <Key>
@@ -342,51 +50,6 @@
           <Property Name="CurrentSupplierCalendar_Id" Type="int" />
           <Property Name="Organisation_Id" Type="int" />
         </EntityType>
-        <EntityType Name="Organisations">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="int" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Programs" Type="nvarchar(max)" />
-          <Property Name="EducationID" Type="nvarchar(max)" />
-          <Property Name="DecileId" Type="int" />
-          <Property Name="Roll" Type="int" Nullable="false" />
-          <Property Name="RankId" Type="int" />
-          <Property Name="Classrooms" Type="int" Nullable="false" />
-          <Property Name="LastDateBasicEvent" Type="datetime" Nullable="false" />
-          <Property Name="HaveLogo" Type="nvarchar(max)" />
-          <Property Name="CustComment" Type="nvarchar(max)" />
-          <Property Name="CustQuickComment" Type="nvarchar(max)" />
-          <Property Name="ContactPersonalNote" Type="nvarchar(max)" />
-          <Property Name="Phone" Type="nvarchar(max)" />
-          <Property Name="Fax" Type="nvarchar(max)" />
-          <Property Name="Email" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="ProductMarketingJobs">
-          <Key>
-            <PropertyRef Name="Product_Id" />
-            <PropertyRef Name="MarketingJob_Id" />
-          </Key>
-          <Property Name="Product_Id" Type="int" Nullable="false" />
-          <Property Name="MarketingJob_Id" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Products">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="Programs">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="IdCode" Type="nvarchar(max)" />
-          <Property Name="Name" Type="nvarchar(max)" />
-        </EntityType>
         <EntityType Name="Ranks">
           <Key>
             <PropertyRef Name="Id" />
@@ -395,91 +58,6 @@
           <Property Name="Name" Type="nvarchar(max)" />
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Active" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Roles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Description" Type="nvarchar(max)" />
-          <Property Name="Active" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="States">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="Suburbs">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Active" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="TypeOfRequestPrograms">
-          <Key>
-            <PropertyRef Name="TypeOfRequest_Id" />
-            <PropertyRef Name="Program_Id" />
-          </Key>
-          <Property Name="TypeOfRequest_Id" Type="int" Nullable="false" />
-          <Property Name="Program_Id" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="TypeOfRequests">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="utContactLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="DateCreated" Type="datetime" Nullable="false" />
-          <Property Name="Message" Type="ntext" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="utContentSearch">
-          <Key>
-            <PropertyRef Name="nodeID" />
-          </Key>
-          <Property Name="nodeID" Type="int" Nullable="false" />
-          <Property Name="title" Type="nvarchar" MaxLength="250" />
-          <Property Name="docAlias" Type="nvarchar" MaxLength="50" />
-          <Property Name="synopsis" Type="nvarchar" MaxLength="1000" />
-          <Property Name="content" Type="nvarchar(max)" />
-          <Property Name="DatePosted" Type="datetime" />
-        </EntityType>
-        <EntityType Name="utCustomer">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="DateCreated" Type="datetime" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
-          <Property Name="DeliveryName" Type="nvarchar" MaxLength="50" />
-          <Property Name="DeliveryAddressLine1" Type="nvarchar" MaxLength="50" />
-          <Property Name="DeliveryAddressLine2" Type="nvarchar" MaxLength="50" />
-          <Property Name="DeliveryCity" Type="nvarchar" MaxLength="50" />
-          <Property Name="DeliveryPostcode" Type="nvarchar" MaxLength="50" />
-          <Property Name="DeliveryCountry" Type="nvarchar" MaxLength="50" />
-          <Property Name="BillingName" Type="nvarchar" MaxLength="50" />
-          <Property Name="BillingAddressLine1" Type="nvarchar" MaxLength="50" />
-          <Property Name="BillingAddressLine2" Type="nvarchar" MaxLength="50" />
-          <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
-          <Property Name="BillingPostcode" Type="nvarchar" MaxLength="50" />
-          <Property Name="BillingCountry" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="utOrder">
           <Key>
@@ -548,33 +126,6 @@
           <Property Name="CustomImageAttributes2" Type="varchar" MaxLength="500" />
           <Property Name="IsExported" Type="bit" />
         </EntityType>
-        <EntityType Name="utOrderStatusChangeLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="DateCreated" Type="datetime" Nullable="false" />
-          <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Value" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="Initiator" Type="varchar" Nullable="false" MaxLength="50" />
-        </EntityType>
-        <EntityType Name="utPromoCode">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="DateCreated" Type="datetime" Nullable="false" />
-          <Property Name="PromoCode" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="DiscountPercentage" Type="money" />
-          <Property Name="DateValidFrom" Type="datetime" />
-          <Property Name="DateValidTo" Type="datetime" />
-          <Property Name="IsSingleUse" Type="bit" />
-          <Property Name="SchoolCode" Type="varchar" MaxLength="50" />
-          <Property Name="IsDisabled" Type="bit" />
-          <Property Name="QualifierProductID" Type="varchar" MaxLength="50" />
-          <Property Name="QualifierProductQty" Type="int" />
-          <Property Name="DiscountAmount" Type="money" />
-        </EntityType>
         <EntityType Name="utSchool">
           <Key>
             <PropertyRef Name="Id" />
@@ -604,17 +155,6 @@
           <Property Name="Code" Type="varchar" MaxLength="50" />
           <Property Name="HeaderBorderBottomColour" Type="varchar" MaxLength="6" />
         </EntityType>
-        <EntityType Name="utSchoolGalleryImage">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Caption" Type="nvarchar" Nullable="false" MaxLength="100" />
-          <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Priority" Type="int" Nullable="false" />
-          <Property Name="ImageName" Type="varchar" Nullable="false" MaxLength="50" />
-          <Property Name="LinkURL" Type="nvarchar" MaxLength="500" />
-        </EntityType>
         <EntityType Name="utSchoolNames">
           <Key>
             <PropertyRef Name="Id" />
@@ -629,27 +169,6 @@
           <Property Name="Email" Type="varchar" MaxLength="100" />
           <Property Name="Password" Type="varchar" MaxLength="100" />
         </EntityType>
-        <EntityType Name="utSchoolUser">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="SchoolId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" MaxLength="100" />
-        </EntityType>
-        <EntityType Name="utSendToFriendLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="DateCreated" Type="datetime" Nullable="false" />
-          <Property Name="EmailFrom" Type="nvarchar" Nullable="false" MaxLength="100" />
-          <Property Name="EmailTo" Type="nvarchar" Nullable="false" MaxLength="100" />
-          <Property Name="Message" Type="ntext" />
-          <Property Name="URL" Type="nvarchar" MaxLength="256" />
-        </EntityType>
         <EntityType Name="utShoppingCart">
           <Key>
             <PropertyRef Name="Id" />
@@ -662,24 +181,6 @@
           <Property Name="SupportedSchools" Type="text" />
         </EntityType>
         <EntityType Name="utShoppingCartItem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ShoppingCartId" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="DateCreated" Type="datetime" Nullable="false" />
-          <Property Name="ItemType" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Quantity" Type="int" Nullable="false" />
-          <Property Name="ProductId" Type="int" Nullable="false" />
-          <Property Name="CustomText" Type="ntext" />
-          <Property Name="CustomImageSrc" Type="nvarchar" MaxLength="500" />
-          <Property Name="CustomImageAttributes" Type="varchar" MaxLength="500" />
-          <Property Name="CustomImageSrc2" Type="nvarchar" MaxLength="500" />
-          <Property Name="CustomImageAttributes2" Type="varchar" MaxLength="500" />
-          <Property Name="Rnd" Type="varchar" MaxLength="50" />
-          <Property Name="SubmitPhoto" Type="bit" />
-        </EntityType>
-        <EntityType Name="utShoppingCartItemBackup">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -742,350 +243,6 @@
           <Property Name="UnitPriceCard" Type="money" />
           <Property Name="Total" Type="money" />
         </EntityType>
-        <Association Name="FK_dbo_Addresses_dbo_Buildings_BuildingId">
-          <End Role="Buildings" Type="AbacusDbModel.Store.Buildings" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Buildings">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="BuildingId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Cities_CityId">
-          <End Role="Cities" Type="AbacusDbModel.Store.Cities" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cities">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="CityId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Contacts_ContactId">
-          <End Role="Contacts" Type="AbacusDbModel.Store.Contacts" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Contacts">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="ContactId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Countries_CountryId">
-          <End Role="Countries" Type="AbacusDbModel.Store.Countries" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Countries">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="CountryId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_States_StateId">
-          <End Role="States" Type="AbacusDbModel.Store.States" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="States">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="StateId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Suburbs_SuburbId">
-          <End Role="Suburbs" Type="AbacusDbModel.Store.Suburbs" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Suburbs">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="SuburbId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Cities_dbo_Countries_Country_Id">
-          <End Role="Countries" Type="AbacusDbModel.Store.Countries" Multiplicity="0..1" />
-          <End Role="Cities" Type="AbacusDbModel.Store.Cities" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Countries">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Cities">
-              <PropertyRef Name="Country_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_ContactRoles_dbo_Roles_Role_Id">
-          <End Role="Roles" Type="AbacusDbModel.Store.Roles" Multiplicity="0..1" />
-          <End Role="ContactRoles" Type="AbacusDbModel.Store.ContactRoles" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ContactRoles">
-              <PropertyRef Name="Role_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId">
-          <End Role="ContactTitles" Type="AbacusDbModel.Store.ContactTitles" Multiplicity="0..1" />
-          <End Role="Contacts" Type="AbacusDbModel.Store.Contacts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ContactTitles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contacts">
-              <PropertyRef Name="ContactTitleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Contacts_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="0..1" />
-          <End Role="Contacts" Type="AbacusDbModel.Store.Contacts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contacts">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Contacts_dbo_Roles_RoleId">
-          <End Role="Roles" Type="AbacusDbModel.Store.Roles" Multiplicity="0..1" />
-          <End Role="Contacts" Type="AbacusDbModel.Store.Contacts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contacts">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Conversations_dbo_Contacts_ContactId">
-          <End Role="Contacts" Type="AbacusDbModel.Store.Contacts" Multiplicity="1" />
-          <End Role="Conversations" Type="AbacusDbModel.Store.Conversations" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Contacts">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Conversations">
-              <PropertyRef Name="ContactId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Conversations_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="1" />
-          <End Role="Conversations" Type="AbacusDbModel.Store.Conversations" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Conversations">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="1" />
-          <End Role="InvoiceTotals" Type="AbacusDbModel.Store.InvoiceTotals" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="InvoiceTotals">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Addresses_AddressId">
-          <End Role="Addresses" Type="AbacusDbModel.Store.Addresses" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.Store.MarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Addresses">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="AddressId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Contacts_ContactId">
-          <End Role="Contacts" Type="AbacusDbModel.Store.Contacts" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.Store.MarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Contacts">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="ContactId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.Store.MarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Programs_ProgramId">
-          <End Role="Programs" Type="AbacusDbModel.Store.Programs" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.Store.MarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Programs">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="ProgramId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId">
-          <End Role="TypeOfRequests" Type="AbacusDbModel.Store.TypeOfRequests" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.Store.MarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TypeOfRequests">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="TypeOfRequestId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="0..1" />
-          <End Role="OrganisationDetail_InSchool" Type="AbacusDbModel.Store.OrganisationDetail_InSchool" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="OrganisationDetail_InSchool">
-              <PropertyRef Name="CurrentSupplierCalendar_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id">
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="0..1" />
-          <End Role="OrganisationDetail_InSchool" Type="AbacusDbModel.Store.OrganisationDetail_InSchool" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="OrganisationDetail_InSchool">
-              <PropertyRef Name="Organisation_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Organisations_dbo_Deciles_DecileId">
-          <End Role="Deciles" Type="AbacusDbModel.Store.Deciles" Multiplicity="0..1" />
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Deciles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Organisations">
-              <PropertyRef Name="DecileId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Organisations_dbo_Ranks_RankId">
-          <End Role="Ranks" Type="AbacusDbModel.Store.Ranks" Multiplicity="0..1" />
-          <End Role="Organisations" Type="AbacusDbModel.Store.Organisations" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Ranks">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Organisations">
-              <PropertyRef Name="RankId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_ProductMarketingJobs_dbo_MarketingJobs_MarketingJob_Id">
-          <End Role="MarketingJobs" Type="AbacusDbModel.Store.MarketingJobs" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ProductMarketingJobs" Type="AbacusDbModel.Store.ProductMarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MarketingJobs">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ProductMarketingJobs">
-              <PropertyRef Name="MarketingJob_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_ProductMarketingJobs_dbo_Products_Product_Id">
-          <End Role="Products" Type="AbacusDbModel.Store.Products" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ProductMarketingJobs" Type="AbacusDbModel.Store.ProductMarketingJobs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Products">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ProductMarketingJobs">
-              <PropertyRef Name="Product_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_TypeOfRequestPrograms_dbo_Programs_Program_Id">
-          <End Role="Programs" Type="AbacusDbModel.Store.Programs" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="TypeOfRequestPrograms" Type="AbacusDbModel.Store.TypeOfRequestPrograms" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Programs">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TypeOfRequestPrograms">
-              <PropertyRef Name="Program_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_TypeOfRequestPrograms_dbo_TypeOfRequests_TypeOfRequest_Id">
-          <End Role="TypeOfRequests" Type="AbacusDbModel.Store.TypeOfRequests" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="TypeOfRequestPrograms" Type="AbacusDbModel.Store.TypeOfRequestPrograms" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TypeOfRequests">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="TypeOfRequestPrograms">
-              <PropertyRef Name="TypeOfRequest_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getOrderItemsForProcessing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1125,158 +282,23 @@
           <Parameter Name="documentTypeAlias" Type="nvarchar" Mode="In" />
           <Parameter Name="keyword" Type="nvarchar" Mode="In" />
         </Function>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AbacusDbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="AbacusEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="AbacusCodes" EntityType="AbacusDbModel.AbacusCode" />
-          <EntitySet Name="Addresses" EntityType="AbacusDbModel.Address" />
-          <EntitySet Name="Buildings" EntityType="AbacusDbModel.Building" />
-          <EntitySet Name="Cities" EntityType="AbacusDbModel.City" />
-          <EntitySet Name="Comments" EntityType="AbacusDbModel.Comment" />
-          <EntitySet Name="ContactRoles" EntityType="AbacusDbModel.ContactRole" />
-          <EntitySet Name="Contacts" EntityType="AbacusDbModel.Contact" />
-          <EntitySet Name="ContactTitles" EntityType="AbacusDbModel.ContactTitle" />
-          <EntitySet Name="Conversations" EntityType="AbacusDbModel.Conversation" />
-          <EntitySet Name="Countries" EntityType="AbacusDbModel.Country" />
           <EntitySet Name="Deciles" EntityType="AbacusDbModel.Decile" />
-          <EntitySet Name="InvoiceTotals" EntityType="AbacusDbModel.InvoiceTotal" />
-          <EntitySet Name="JobDescriptions" EntityType="AbacusDbModel.JobDescription" />
-          <EntitySet Name="MarketingJobs" EntityType="AbacusDbModel.MarketingJob" />
-          <EntitySet Name="OrganisationContacts" EntityType="AbacusDbModel.OrganisationContact" />
           <EntitySet Name="OrganisationDetail_InSchool" EntityType="AbacusDbModel.OrganisationDetail_InSchool" />
-          <EntitySet Name="Organisations" EntityType="AbacusDbModel.Organisation" />
-          <EntitySet Name="Products" EntityType="AbacusDbModel.Product" />
-          <EntitySet Name="Programs" EntityType="AbacusDbModel.Program" />
           <EntitySet Name="Ranks" EntityType="AbacusDbModel.Rank" />
-          <EntitySet Name="Roles" EntityType="AbacusDbModel.Role" />
-          <EntitySet Name="States" EntityType="AbacusDbModel.State" />
-          <EntitySet Name="Suburbs" EntityType="AbacusDbModel.Suburb" />
-          <EntitySet Name="TypeOfRequests" EntityType="AbacusDbModel.TypeOfRequest" />
-          <EntitySet Name="utContactLogs" EntityType="AbacusDbModel.utContactLog" />
-          <EntitySet Name="utContentSearches" EntityType="AbacusDbModel.utContentSearch" />
-          <EntitySet Name="utCustomers" EntityType="AbacusDbModel.utCustomer" />
           <EntitySet Name="utOrders" EntityType="AbacusDbModel.utOrder" />
           <EntitySet Name="utOrderItems" EntityType="AbacusDbModel.utOrderItem" />
-          <EntitySet Name="utOrderStatusChangeLogs" EntityType="AbacusDbModel.utOrderStatusChangeLog" />
-          <EntitySet Name="utPromoCodes" EntityType="AbacusDbModel.utPromoCode" />
           <EntitySet Name="utSchools" EntityType="AbacusDbModel.utSchool" />
-          <EntitySet Name="utSchoolGalleryImages" EntityType="AbacusDbModel.utSchoolGalleryImage" />
           <EntitySet Name="utSchoolNames" EntityType="AbacusDbModel.utSchoolName" />
-          <EntitySet Name="utSchoolUsers" EntityType="AbacusDbModel.utSchoolUser" />
-          <EntitySet Name="utSendToFriendLogs" EntityType="AbacusDbModel.utSendToFriendLog" />
           <EntitySet Name="utShoppingCarts" EntityType="AbacusDbModel.utShoppingCart" />
           <EntitySet Name="utShoppingCartItems" EntityType="AbacusDbModel.utShoppingCartItem" />
-          <EntitySet Name="utShoppingCartItemBackups" EntityType="AbacusDbModel.utShoppingCartItemBackup" />
           <EntitySet Name="utSPImages" EntityType="AbacusDbModel.utSPImage" />
           <EntitySet Name="utSPOrders" EntityType="AbacusDbModel.utSPOrder" />
           <EntitySet Name="utSPReorderItems" EntityType="AbacusDbModel.utSPReorderItem" />
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Buildings_BuildingId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_Buildings_BuildingId">
-            <End Role="Buildings" EntitySet="Buildings" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Cities_CityId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_Cities_CityId">
-            <End Role="Cities" EntitySet="Cities" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Contacts_ContactId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_Contacts_ContactId">
-            <End Role="Contacts" EntitySet="Contacts" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Countries_CountryId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_Countries_CountryId">
-            <End Role="Countries" EntitySet="Countries" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Organisations_OrganisationId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_States_StateId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_States_StateId">
-            <End Role="States" EntitySet="States" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Addresses_dbo_Suburbs_SuburbId" Association="AbacusDbModel.FK_dbo_Addresses_dbo_Suburbs_SuburbId">
-            <End Role="Suburbs" EntitySet="Suburbs" />
-            <End Role="Addresses" EntitySet="Addresses" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Addresses_AddressId" Association="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Addresses_AddressId">
-            <End Role="Addresses" EntitySet="Addresses" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Cities_dbo_Countries_Country_Id" Association="AbacusDbModel.FK_dbo_Cities_dbo_Countries_Country_Id">
-            <End Role="Countries" EntitySet="Countries" />
-            <End Role="Cities" EntitySet="Cities" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_ContactRoles_dbo_Roles_Role_Id" Association="AbacusDbModel.FK_dbo_ContactRoles_dbo_Roles_Role_Id">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="ContactRoles" EntitySet="ContactRoles" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId" Association="AbacusDbModel.FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId">
-            <End Role="ContactTitles" EntitySet="ContactTitles" />
-            <End Role="Contacts" EntitySet="Contacts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Contacts_dbo_Organisations_OrganisationId" Association="AbacusDbModel.FK_dbo_Contacts_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="Contacts" EntitySet="Contacts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Contacts_dbo_Roles_RoleId" Association="AbacusDbModel.FK_dbo_Contacts_dbo_Roles_RoleId">
-            <End Role="Roles" EntitySet="Roles" />
-            <End Role="Contacts" EntitySet="Contacts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Conversations_dbo_Contacts_ContactId" Association="AbacusDbModel.FK_dbo_Conversations_dbo_Contacts_ContactId">
-            <End Role="Contacts" EntitySet="Contacts" />
-            <End Role="Conversations" EntitySet="Conversations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Contacts_ContactId" Association="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Contacts_ContactId">
-            <End Role="Contacts" EntitySet="Contacts" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Conversations_dbo_Organisations_OrganisationId" Association="AbacusDbModel.FK_dbo_Conversations_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="Conversations" EntitySet="Conversations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Organisations_dbo_Deciles_DecileId" Association="AbacusDbModel.FK_dbo_Organisations_dbo_Deciles_DecileId">
-            <End Role="Deciles" EntitySet="Deciles" />
-            <End Role="Organisations" EntitySet="Organisations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId" Association="AbacusDbModel.FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="InvoiceTotals" EntitySet="InvoiceTotals" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId" Association="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_Programs_ProgramId" Association="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Programs_ProgramId">
-            <End Role="Programs" EntitySet="Programs" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId" Association="AbacusDbModel.FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId">
-            <End Role="TypeOfRequests" EntitySet="TypeOfRequests" />
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id" Association="AbacusDbModel.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="OrganisationDetail_InSchool" EntitySet="OrganisationDetail_InSchool" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id" Association="AbacusDbModel.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id">
-            <End Role="Organisations" EntitySet="Organisations" />
-            <End Role="OrganisationDetail_InSchool" EntitySet="OrganisationDetail_InSchool" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Organisations_dbo_Ranks_RankId" Association="AbacusDbModel.FK_dbo_Organisations_dbo_Ranks_RankId">
-            <End Role="Ranks" EntitySet="Ranks" />
-            <End Role="Organisations" EntitySet="Organisations" />
-          </AssociationSet>
-          <AssociationSet Name="ProductMarketingJobs" Association="AbacusDbModel.ProductMarketingJobs">
-            <End Role="MarketingJobs" EntitySet="MarketingJobs" />
-            <End Role="Products" EntitySet="Products" />
-          </AssociationSet>
-          <AssociationSet Name="TypeOfRequestPrograms" Association="AbacusDbModel.TypeOfRequestPrograms">
-            <End Role="Programs" EntitySet="Programs" />
-            <End Role="TypeOfRequests" EntitySet="TypeOfRequests" />
-          </AssociationSet>
           <FunctionImport Name="getOrderItemsForProcessing" ReturnType="Collection(AbacusDbModel.getOrderItemsForProcessing_Result)" />
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
@@ -1309,140 +331,14 @@
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
           <FunctionImport Name="usp_schoolNameSearch" ReturnType="Collection(AbacusDbModel.usp_schoolNameSearch_Result)">
-            <Parameter Name="schoolName" Mode="In" Type="String" />
+          <Parameter Name="schoolName" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="usp_utContentSearch" ReturnType="Collection(AbacusDbModel.usp_utContentSearch_Result)">
             <Parameter Name="documentTypeAlias" Mode="In" Type="String" />
             <Parameter Name="keyword" Mode="In" Type="String" />
           </FunctionImport>
+          <EntitySet Name="OrdersChangeLogs" EntityType="AbacusDbModel.OrdersChangeLog" />
         </EntityContainer>
-        <EntityType Name="AbacusCode">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="Address">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="BuildingId" Type="Int32" />
-          <Property Name="Street" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="SuburbId" Type="Int32" />
-          <Property Name="CityId" Type="Int32" />
-          <Property Name="StateId" Type="Int32" />
-          <Property Name="CountryId" Type="Int32" />
-          <Property Name="PostCode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="IsDelivery" Type="Boolean" Nullable="false" />
-          <Property Name="ContactId" Type="Int32" />
-          <Property Name="OrganisationId" Type="Int32" />
-          <Property Name="MarketingJobId" Type="Int32" />
-          <NavigationProperty Name="Building" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Buildings_BuildingId" FromRole="Addresses" ToRole="Buildings" />
-          <NavigationProperty Name="City" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Cities_CityId" FromRole="Addresses" ToRole="Cities" />
-          <NavigationProperty Name="Contact" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Contacts_ContactId" FromRole="Addresses" ToRole="Contacts" />
-          <NavigationProperty Name="Country" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Countries_CountryId" FromRole="Addresses" ToRole="Countries" />
-          <NavigationProperty Name="Organisation" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Organisations_OrganisationId" FromRole="Addresses" ToRole="Organisations" />
-          <NavigationProperty Name="State" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_States_StateId" FromRole="Addresses" ToRole="States" />
-          <NavigationProperty Name="Suburb" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Suburbs_SuburbId" FromRole="Addresses" ToRole="Suburbs" />
-          <NavigationProperty Name="MarketingJobs" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Addresses_AddressId" FromRole="Addresses" ToRole="MarketingJobs" />
-        </EntityType>
-        <EntityType Name="Building">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Buildings_BuildingId" FromRole="Buildings" ToRole="Addresses" />
-        </EntityType>
-        <EntityType Name="City">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Country_Id" Type="Int32" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Cities_CityId" FromRole="Cities" ToRole="Addresses" />
-          <NavigationProperty Name="Country" Relationship="AbacusDbModel.FK_dbo_Cities_dbo_Countries_Country_Id" FromRole="Cities" ToRole="Countries" />
-        </EntityType>
-        <EntityType Name="Comment">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Text" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="ContactRole">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="Int32" Nullable="false" />
-          <Property Name="Role_Id" Type="Int32" />
-          <NavigationProperty Name="Role" Relationship="AbacusDbModel.FK_dbo_ContactRoles_dbo_Roles_Role_Id" FromRole="ContactRoles" ToRole="Roles" />
-        </EntityType>
-        <EntityType Name="Contact">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="ContactTitleId" Type="Int32" />
-          <Property Name="PhoneDay" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="PhoneAfterHours" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="PhoneCell" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="EmailWork" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="IsPrimaryEmailWork" Type="Boolean" Nullable="false" />
-          <Property Name="EmailPersonal" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="IsPrimaryEmailPersonal" Type="Boolean" Nullable="false" />
-          <Property Name="OrganisationId" Type="Int32" />
-          <Property Name="RoleId" Type="Int32" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Contacts_ContactId" FromRole="Contacts" ToRole="Addresses" />
-          <NavigationProperty Name="ContactTitle" Relationship="AbacusDbModel.FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId" FromRole="Contacts" ToRole="ContactTitles" />
-          <NavigationProperty Name="Organisation" Relationship="AbacusDbModel.FK_dbo_Contacts_dbo_Organisations_OrganisationId" FromRole="Contacts" ToRole="Organisations" />
-          <NavigationProperty Name="Role" Relationship="AbacusDbModel.FK_dbo_Contacts_dbo_Roles_RoleId" FromRole="Contacts" ToRole="Roles" />
-          <NavigationProperty Name="Conversations" Relationship="AbacusDbModel.FK_dbo_Conversations_dbo_Contacts_ContactId" FromRole="Contacts" ToRole="Conversations" />
-          <NavigationProperty Name="MarketingJobs" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Contacts_ContactId" FromRole="Contacts" ToRole="MarketingJobs" />
-        </EntityType>
-        <EntityType Name="ContactTitle">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ContactTitleType" Type="Int32" Nullable="false" />
-          <Property Name="Other" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Contacts" Relationship="AbacusDbModel.FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId" FromRole="ContactTitles" ToRole="Contacts" />
-        </EntityType>
-        <EntityType Name="Conversation">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ContactId" Type="Int32" Nullable="false" />
-          <Property Name="OrganisationId" Type="Int32" Nullable="false" />
-          <Property Name="ContactType" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="ConversationJobNumber" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="ConversationText" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
-          <Property Name="HasTask" Type="Boolean" />
-          <Property Name="Active" Type="Boolean" Nullable="false" />
-          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Contact" Relationship="AbacusDbModel.FK_dbo_Conversations_dbo_Contacts_ContactId" FromRole="Conversations" ToRole="Contacts" />
-          <NavigationProperty Name="Organisation" Relationship="AbacusDbModel.FK_dbo_Conversations_dbo_Organisations_OrganisationId" FromRole="Conversations" ToRole="Organisations" />
-        </EntityType>
-        <EntityType Name="Country">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Code" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Countries_CountryId" FromRole="Countries" ToRole="Addresses" />
-          <NavigationProperty Name="Cities" Relationship="AbacusDbModel.FK_dbo_Cities_dbo_Countries_Country_Id" FromRole="Countries" ToRole="Cities" />
-        </EntityType>
         <EntityType Name="Decile">
           <Key>
             <PropertyRef Name="Id" />
@@ -1450,73 +346,6 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Organisations" Relationship="AbacusDbModel.FK_dbo_Organisations_dbo_Deciles_DecileId" FromRole="Deciles" ToRole="Organisations" />
-        </EntityType>
-        <EntityType Name="InvoiceTotal">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Gross" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="Qty" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="OrderedQty" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="Year" Type="Int32" Nullable="false" />
-          <Property Name="OrganisationId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Organisation" Relationship="AbacusDbModel.FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId" FromRole="InvoiceTotals" ToRole="Organisations" />
-        </EntityType>
-        <EntityType Name="JobDescription">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Active" Type="Boolean" Nullable="false" />
-        </EntityType>
-        <EntityType Name="MarketingJob">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Barcode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="OrganisationId" Type="Int32" Nullable="false" />
-          <Property Name="ContactId" Type="Int32" Nullable="false" />
-          <Property Name="AddressId" Type="Int32" Nullable="false" />
-          <Property Name="Title" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="ProgramId" Type="Int32" Nullable="false" />
-          <Property Name="TypeOfRequestId" Type="Int32" Nullable="false" />
-          <Property Name="OrderForm" Type="Int32" Nullable="false" />
-          <Property Name="IsSamples" Type="Boolean" Nullable="false" />
-          <Property Name="IsPosters" Type="Boolean" Nullable="false" />
-          <Property Name="RequestDeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="IndicativeOrderReturn" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="LastDayOfSchoolYear" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="LogoId" Type="Int32" Nullable="false" />
-          <Property Name="DeliveryInstructions" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Smencils" Type="Boolean" Nullable="false" />
-          <Property Name="Online" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
-          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="SubmittedUserId" Type="Int32" Nullable="false" />
-          <Property Name="SubmittedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="JobStatus" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Address" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Addresses_AddressId" FromRole="MarketingJobs" ToRole="Addresses" />
-          <NavigationProperty Name="Contact" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Contacts_ContactId" FromRole="MarketingJobs" ToRole="Contacts" />
-          <NavigationProperty Name="Organisation" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId" FromRole="MarketingJobs" ToRole="Organisations" />
-          <NavigationProperty Name="Program" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Programs_ProgramId" FromRole="MarketingJobs" ToRole="Programs" />
-          <NavigationProperty Name="TypeOfRequest" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId" FromRole="MarketingJobs" ToRole="TypeOfRequests" />
-          <NavigationProperty Name="Products" Relationship="AbacusDbModel.ProductMarketingJobs" FromRole="MarketingJobs" ToRole="Products" />
-        </EntityType>
-        <EntityType Name="OrganisationContact">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="OfficePhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="OfficeFax" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="OfficeEmail" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="OrganisationDetail_InSchool">
           <Key>
@@ -1525,58 +354,7 @@
           <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="CurrentSupplierCalendar_Id" Type="Int32" />
           <Property Name="Organisation_Id" Type="Int32" />
-          <NavigationProperty Name="Organisation" Relationship="AbacusDbModel.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id" FromRole="OrganisationDetail_InSchool" ToRole="Organisations" />
-          <NavigationProperty Name="Organisation1" Relationship="AbacusDbModel.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id" FromRole="OrganisationDetail_InSchool" ToRole="Organisations" />
-        </EntityType>
-        <EntityType Name="Organisation">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="Int32" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Programs" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="EducationID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DecileId" Type="Int32" />
-          <Property Name="Roll" Type="Int32" Nullable="false" />
-          <Property Name="RankId" Type="Int32" />
-          <Property Name="Classrooms" Type="Int32" Nullable="false" />
-          <Property Name="LastDateBasicEvent" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="HaveLogo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CustComment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CustQuickComment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="ContactPersonalNote" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Fax" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Organisations_OrganisationId" FromRole="Organisations" ToRole="Addresses" />
-          <NavigationProperty Name="Contacts" Relationship="AbacusDbModel.FK_dbo_Contacts_dbo_Organisations_OrganisationId" FromRole="Organisations" ToRole="Contacts" />
-          <NavigationProperty Name="Conversations" Relationship="AbacusDbModel.FK_dbo_Conversations_dbo_Organisations_OrganisationId" FromRole="Organisations" ToRole="Conversations" />
-          <NavigationProperty Name="Decile" Relationship="AbacusDbModel.FK_dbo_Organisations_dbo_Deciles_DecileId" FromRole="Organisations" ToRole="Deciles" />
-          <NavigationProperty Name="InvoiceTotals" Relationship="AbacusDbModel.FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId" FromRole="Organisations" ToRole="InvoiceTotals" />
-          <NavigationProperty Name="MarketingJobs" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId" FromRole="Organisations" ToRole="MarketingJobs" />
-          <NavigationProperty Name="OrganisationDetail_InSchool" Relationship="AbacusDbModel.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id" FromRole="Organisations" ToRole="OrganisationDetail_InSchool" />
-          <NavigationProperty Name="OrganisationDetail_InSchool1" Relationship="AbacusDbModel.FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id" FromRole="Organisations" ToRole="OrganisationDetail_InSchool" />
-          <NavigationProperty Name="Rank" Relationship="AbacusDbModel.FK_dbo_Organisations_dbo_Ranks_RankId" FromRole="Organisations" ToRole="Ranks" />
-        </EntityType>
-        <EntityType Name="Product">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="MarketingJobs" Relationship="AbacusDbModel.ProductMarketingJobs" FromRole="Products" ToRole="MarketingJobs" />
-        </EntityType>
-        <EntityType Name="Program">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="IdCode" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="MarketingJobs" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_Programs_ProgramId" FromRole="Programs" ToRole="MarketingJobs" />
-          <NavigationProperty Name="TypeOfRequests" Relationship="AbacusDbModel.TypeOfRequestPrograms" FromRole="Programs" ToRole="TypeOfRequests" />
-        </EntityType>
+          </EntityType>
         <EntityType Name="Rank">
           <Key>
             <PropertyRef Name="Id" />
@@ -1585,90 +363,6 @@
           <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Organisations" Relationship="AbacusDbModel.FK_dbo_Organisations_dbo_Ranks_RankId" FromRole="Ranks" ToRole="Organisations" />
-        </EntityType>
-        <EntityType Name="Role">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="ContactRoles" Relationship="AbacusDbModel.FK_dbo_ContactRoles_dbo_Roles_Role_Id" FromRole="Roles" ToRole="ContactRoles" />
-          <NavigationProperty Name="Contacts" Relationship="AbacusDbModel.FK_dbo_Contacts_dbo_Roles_RoleId" FromRole="Roles" ToRole="Contacts" />
-        </EntityType>
-        <EntityType Name="State">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_States_StateId" FromRole="States" ToRole="Addresses" />
-        </EntityType>
-        <EntityType Name="Suburb">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Active" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Addresses" Relationship="AbacusDbModel.FK_dbo_Addresses_dbo_Suburbs_SuburbId" FromRole="Suburbs" ToRole="Addresses" />
-        </EntityType>
-        <EntityType Name="TypeOfRequest">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="MarketingJobs" Relationship="AbacusDbModel.FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId" FromRole="TypeOfRequests" ToRole="MarketingJobs" />
-          <NavigationProperty Name="Programs" Relationship="AbacusDbModel.TypeOfRequestPrograms" FromRole="TypeOfRequests" ToRole="Programs" />
-        </EntityType>
-        <EntityType Name="utContactLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="utContentSearch">
-          <Key>
-            <PropertyRef Name="nodeID" />
-          </Key>
-          <Property Name="nodeID" Type="Int32" Nullable="false" />
-          <Property Name="title" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
-          <Property Name="docAlias" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="synopsis" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
-          <Property Name="content" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="DatePosted" Type="DateTime" Precision="3" />
-        </EntityType>
-        <EntityType Name="utCustomer">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DeliveryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DeliveryAddressLine1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DeliveryAddressLine2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DeliveryCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DeliveryPostcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="DeliveryCountry" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="BillingName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="BillingAddressLine1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="BillingAddressLine2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="BillingCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="BillingPostcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="BillingCountry" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="utOrder">
           <Key>
@@ -1737,33 +431,6 @@
           <Property Name="CustomImageAttributes2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
           <Property Name="IsExported" Type="Boolean" />
         </EntityType>
-        <EntityType Name="utOrderStatusChangeLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="OrderId" Type="Guid" Nullable="false" />
-          <Property Name="Value" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="Initiator" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="utPromoCode">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="PromoCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="DiscountPercentage" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="DateValidFrom" Type="DateTime" Precision="3" />
-          <Property Name="DateValidTo" Type="DateTime" Precision="3" />
-          <Property Name="IsSingleUse" Type="Boolean" />
-          <Property Name="SchoolCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="IsDisabled" Type="Boolean" />
-          <Property Name="QualifierProductID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="QualifierProductQty" Type="Int32" />
-          <Property Name="DiscountAmount" Type="Decimal" Precision="19" Scale="4" />
-        </EntityType>
         <EntityType Name="utSchool">
           <Key>
             <PropertyRef Name="Id" />
@@ -1793,17 +460,6 @@
           <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="HeaderBorderBottomColour" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
         </EntityType>
-        <EntityType Name="utSchoolGalleryImage">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Caption" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="SchoolId" Type="Guid" Nullable="false" />
-          <Property Name="Priority" Type="Int32" Nullable="false" />
-          <Property Name="ImageName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="LinkURL" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-        </EntityType>
         <EntityType Name="utSchoolName">
           <Key>
             <PropertyRef Name="Id" />
@@ -1818,27 +474,6 @@
           <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="Password" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
         </EntityType>
-        <EntityType Name="utSchoolUser">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="SchoolId" Type="Guid" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="utSendToFriendLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="EmailFrom" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="EmailTo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
-          <Property Name="Message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="URL" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
-        </EntityType>
         <EntityType Name="utShoppingCart">
           <Key>
             <PropertyRef Name="Id" />
@@ -1851,24 +486,6 @@
           <Property Name="SupportedSchools" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
         </EntityType>
         <EntityType Name="utShoppingCartItem">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="ShoppingCartId" Type="Guid" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ItemType" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <Property Name="ProductId" Type="Int32" Nullable="false" />
-          <Property Name="CustomText" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CustomImageSrc" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="CustomImageAttributes" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
-          <Property Name="CustomImageSrc2" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
-          <Property Name="CustomImageAttributes2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
-          <Property Name="Rnd" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-          <Property Name="SubmitPhoto" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="utShoppingCartItemBackup">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -1931,302 +548,6 @@
           <Property Name="UnitPriceCard" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Total" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
-        <Association Name="FK_dbo_Addresses_dbo_Buildings_BuildingId">
-          <End Role="Buildings" Type="AbacusDbModel.Building" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Buildings">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="BuildingId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Cities_CityId">
-          <End Role="Cities" Type="AbacusDbModel.City" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cities">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="CityId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Contacts_ContactId">
-          <End Role="Contacts" Type="AbacusDbModel.Contact" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Contacts">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="ContactId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Countries_CountryId">
-          <End Role="Countries" Type="AbacusDbModel.Country" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Countries">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="CountryId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_States_StateId">
-          <End Role="States" Type="AbacusDbModel.State" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="States">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="StateId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Addresses_dbo_Suburbs_SuburbId">
-          <End Role="Suburbs" Type="AbacusDbModel.Suburb" Multiplicity="0..1" />
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Suburbs">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Addresses">
-              <PropertyRef Name="SuburbId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Addresses_AddressId">
-          <End Role="Addresses" Type="AbacusDbModel.Address" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.MarketingJob" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Addresses">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="AddressId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Cities_dbo_Countries_Country_Id">
-          <End Role="Countries" Type="AbacusDbModel.Country" Multiplicity="0..1" />
-          <End Role="Cities" Type="AbacusDbModel.City" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Countries">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Cities">
-              <PropertyRef Name="Country_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_ContactRoles_dbo_Roles_Role_Id">
-          <End Role="Roles" Type="AbacusDbModel.Role" Multiplicity="0..1" />
-          <End Role="ContactRoles" Type="AbacusDbModel.ContactRole" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="ContactRoles">
-              <PropertyRef Name="Role_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Contacts_dbo_ContactTitles_ContactTitleId">
-          <End Role="ContactTitles" Type="AbacusDbModel.ContactTitle" Multiplicity="0..1" />
-          <End Role="Contacts" Type="AbacusDbModel.Contact" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ContactTitles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contacts">
-              <PropertyRef Name="ContactTitleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Contacts_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="0..1" />
-          <End Role="Contacts" Type="AbacusDbModel.Contact" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contacts">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Contacts_dbo_Roles_RoleId">
-          <End Role="Roles" Type="AbacusDbModel.Role" Multiplicity="0..1" />
-          <End Role="Contacts" Type="AbacusDbModel.Contact" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Roles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Contacts">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Conversations_dbo_Contacts_ContactId">
-          <End Role="Contacts" Type="AbacusDbModel.Contact" Multiplicity="1" />
-          <End Role="Conversations" Type="AbacusDbModel.Conversation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Contacts">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Conversations">
-              <PropertyRef Name="ContactId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Contacts_ContactId">
-          <End Role="Contacts" Type="AbacusDbModel.Contact" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.MarketingJob" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Contacts">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="ContactId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Conversations_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="1" />
-          <End Role="Conversations" Type="AbacusDbModel.Conversation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Conversations">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Organisations_dbo_Deciles_DecileId">
-          <End Role="Deciles" Type="AbacusDbModel.Decile" Multiplicity="0..1" />
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Deciles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Organisations">
-              <PropertyRef Name="DecileId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_InvoiceTotals_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="1" />
-          <End Role="InvoiceTotals" Type="AbacusDbModel.InvoiceTotal" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="InvoiceTotals">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Organisations_OrganisationId">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.MarketingJob" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="OrganisationId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_Programs_ProgramId">
-          <End Role="Programs" Type="AbacusDbModel.Program" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.MarketingJob" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Programs">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="ProgramId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_MarketingJobs_dbo_TypeOfRequests_TypeOfRequestId">
-          <End Role="TypeOfRequests" Type="AbacusDbModel.TypeOfRequest" Multiplicity="1" />
-          <End Role="MarketingJobs" Type="AbacusDbModel.MarketingJob" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TypeOfRequests">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="MarketingJobs">
-              <PropertyRef Name="TypeOfRequestId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_CurrentSupplierCalendar_Id">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="0..1" />
-          <End Role="OrganisationDetail_InSchool" Type="AbacusDbModel.OrganisationDetail_InSchool" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="OrganisationDetail_InSchool">
-              <PropertyRef Name="CurrentSupplierCalendar_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_OrganisationDetail_InSchool_dbo_Organisations_Organisation_Id">
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="0..1" />
-          <End Role="OrganisationDetail_InSchool" Type="AbacusDbModel.OrganisationDetail_InSchool" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Organisations">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="OrganisationDetail_InSchool">
-              <PropertyRef Name="Organisation_Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Organisations_dbo_Ranks_RankId">
-          <End Role="Ranks" Type="AbacusDbModel.Rank" Multiplicity="0..1" />
-          <End Role="Organisations" Type="AbacusDbModel.Organisation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Ranks">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Organisations">
-              <PropertyRef Name="RankId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="ProductMarketingJobs">
-          <End Role="MarketingJobs" Type="AbacusDbModel.MarketingJob" Multiplicity="*" />
-          <End Role="Products" Type="AbacusDbModel.Product" Multiplicity="*" />
-        </Association>
-        <Association Name="TypeOfRequestPrograms">
-          <End Role="Programs" Type="AbacusDbModel.Program" Multiplicity="*" />
-          <End Role="TypeOfRequests" Type="AbacusDbModel.TypeOfRequest" Multiplicity="*" />
-        </Association>
         <ComplexType Name="getOrderItemsForProcessing_Result">
           <Property Type="Guid" Name="Id" Nullable="false" />
           <Property Type="Guid" Name="OrderId" Nullable="false" />
@@ -2275,195 +596,32 @@
           <Property Type="DateTime" Name="DatePosted" Nullable="true" Precision="23" />
           <Property Type="Int32" Name="Relevance" Nullable="false" />
         </ComplexType>
+        <EntityType Name="OrdersChangeLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="ImageId" Nullable="false" />
+          <Property Type="String" Name="OrderType" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OldQuantity" Nullable="false" />
+          <Property Type="Int32" Name="NewQuantity" Nullable="false" />
+          <Property Type="Int64" Name="OldSchoolCode" Nullable="false" />
+          <Property Type="Int64" Name="NewSchoolCode" Nullable="false" />
+          <Property Type="String" Name="OldRoom" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NewRoom" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="AbacusDbModelStoreContainer" CdmEntityContainer="AbacusEntities">
-          <EntitySetMapping Name="AbacusCodes">
-            <EntityTypeMapping TypeName="AbacusDbModel.AbacusCode">
-              <MappingFragment StoreEntitySet="AbacusCodes">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Addresses">
-            <EntityTypeMapping TypeName="AbacusDbModel.Address">
-              <MappingFragment StoreEntitySet="Addresses">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="BuildingId" ColumnName="BuildingId" />
-                <ScalarProperty Name="Street" ColumnName="Street" />
-                <ScalarProperty Name="SuburbId" ColumnName="SuburbId" />
-                <ScalarProperty Name="CityId" ColumnName="CityId" />
-                <ScalarProperty Name="StateId" ColumnName="StateId" />
-                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
-                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
-                <ScalarProperty Name="IsDelivery" ColumnName="IsDelivery" />
-                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
-                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
-                <ScalarProperty Name="MarketingJobId" ColumnName="MarketingJobId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Buildings">
-            <EntityTypeMapping TypeName="AbacusDbModel.Building">
-              <MappingFragment StoreEntitySet="Buildings">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Cities">
-            <EntityTypeMapping TypeName="AbacusDbModel.City">
-              <MappingFragment StoreEntitySet="Cities">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Country_Id" ColumnName="Country_Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Comments">
-            <EntityTypeMapping TypeName="AbacusDbModel.Comment">
-              <MappingFragment StoreEntitySet="Comments">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Text" ColumnName="Text" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ContactRoles">
-            <EntityTypeMapping TypeName="AbacusDbModel.ContactRole">
-              <MappingFragment StoreEntitySet="ContactRoles">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Contacts">
-            <EntityTypeMapping TypeName="AbacusDbModel.Contact">
-              <MappingFragment StoreEntitySet="Contacts">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="ContactTitleId" ColumnName="ContactTitleId" />
-                <ScalarProperty Name="PhoneDay" ColumnName="PhoneDay" />
-                <ScalarProperty Name="PhoneAfterHours" ColumnName="PhoneAfterHours" />
-                <ScalarProperty Name="PhoneCell" ColumnName="PhoneCell" />
-                <ScalarProperty Name="EmailWork" ColumnName="EmailWork" />
-                <ScalarProperty Name="IsPrimaryEmailWork" ColumnName="IsPrimaryEmailWork" />
-                <ScalarProperty Name="EmailPersonal" ColumnName="EmailPersonal" />
-                <ScalarProperty Name="IsPrimaryEmailPersonal" ColumnName="IsPrimaryEmailPersonal" />
-                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
-                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ContactTitles">
-            <EntityTypeMapping TypeName="AbacusDbModel.ContactTitle">
-              <MappingFragment StoreEntitySet="ContactTitles">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ContactTitleType" ColumnName="ContactTitleType" />
-                <ScalarProperty Name="Other" ColumnName="Other" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Conversations">
-            <EntityTypeMapping TypeName="AbacusDbModel.Conversation">
-              <MappingFragment StoreEntitySet="Conversations">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
-                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
-                <ScalarProperty Name="ContactType" ColumnName="ContactType" />
-                <ScalarProperty Name="ConversationJobNumber" ColumnName="ConversationJobNumber" />
-                <ScalarProperty Name="ConversationText" ColumnName="ConversationText" />
-                <ScalarProperty Name="HasTask" ColumnName="HasTask" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-                <ScalarProperty Name="Created" ColumnName="Created" />
-                <ScalarProperty Name="UserCreatedId" ColumnName="UserCreatedId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Countries">
-            <EntityTypeMapping TypeName="AbacusDbModel.Country">
-              <MappingFragment StoreEntitySet="Countries">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Deciles">
             <EntityTypeMapping TypeName="AbacusDbModel.Decile">
               <MappingFragment StoreEntitySet="Deciles">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="InvoiceTotals">
-            <EntityTypeMapping TypeName="AbacusDbModel.InvoiceTotal">
-              <MappingFragment StoreEntitySet="InvoiceTotals">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Gross" ColumnName="Gross" />
-                <ScalarProperty Name="Qty" ColumnName="Qty" />
-                <ScalarProperty Name="OrderedQty" ColumnName="OrderedQty" />
-                <ScalarProperty Name="Year" ColumnName="Year" />
-                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="JobDescriptions">
-            <EntityTypeMapping TypeName="AbacusDbModel.JobDescription">
-              <MappingFragment StoreEntitySet="JobDescriptions">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MarketingJobs">
-            <EntityTypeMapping TypeName="AbacusDbModel.MarketingJob">
-              <MappingFragment StoreEntitySet="MarketingJobs">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
-                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
-                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
-                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
-                <ScalarProperty Name="TypeOfRequestId" ColumnName="TypeOfRequestId" />
-                <ScalarProperty Name="OrderForm" ColumnName="OrderForm" />
-                <ScalarProperty Name="IsSamples" ColumnName="IsSamples" />
-                <ScalarProperty Name="IsPosters" ColumnName="IsPosters" />
-                <ScalarProperty Name="RequestDeliveryDate" ColumnName="RequestDeliveryDate" />
-                <ScalarProperty Name="IndicativeOrderReturn" ColumnName="IndicativeOrderReturn" />
-                <ScalarProperty Name="LastDayOfSchoolYear" ColumnName="LastDayOfSchoolYear" />
-                <ScalarProperty Name="LogoId" ColumnName="LogoId" />
-                <ScalarProperty Name="DeliveryInstructions" ColumnName="DeliveryInstructions" />
-                <ScalarProperty Name="Notes" ColumnName="Notes" />
-                <ScalarProperty Name="Smencils" ColumnName="Smencils" />
-                <ScalarProperty Name="Online" ColumnName="Online" />
-                <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="SubmittedUserId" ColumnName="SubmittedUserId" />
-                <ScalarProperty Name="SubmittedDate" ColumnName="SubmittedDate" />
-                <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrganisationContacts">
-            <EntityTypeMapping TypeName="AbacusDbModel.OrganisationContact">
-              <MappingFragment StoreEntitySet="OrganisationContacts">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="OfficePhone" ColumnName="OfficePhone" />
-                <ScalarProperty Name="OfficeFax" ColumnName="OfficeFax" />
-                <ScalarProperty Name="OfficeEmail" ColumnName="OfficeEmail" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2476,46 +634,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Organisations">
-            <EntityTypeMapping TypeName="AbacusDbModel.Organisation">
-              <MappingFragment StoreEntitySet="Organisations">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Programs" ColumnName="Programs" />
-                <ScalarProperty Name="EducationID" ColumnName="EducationID" />
-                <ScalarProperty Name="DecileId" ColumnName="DecileId" />
-                <ScalarProperty Name="Roll" ColumnName="Roll" />
-                <ScalarProperty Name="RankId" ColumnName="RankId" />
-                <ScalarProperty Name="Classrooms" ColumnName="Classrooms" />
-                <ScalarProperty Name="LastDateBasicEvent" ColumnName="LastDateBasicEvent" />
-                <ScalarProperty Name="HaveLogo" ColumnName="HaveLogo" />
-                <ScalarProperty Name="CustComment" ColumnName="CustComment" />
-                <ScalarProperty Name="CustQuickComment" ColumnName="CustQuickComment" />
-                <ScalarProperty Name="ContactPersonalNote" ColumnName="ContactPersonalNote" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Fax" ColumnName="Fax" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="AbacusDbModel.Product">
-              <MappingFragment StoreEntitySet="Products">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Programs">
-            <EntityTypeMapping TypeName="AbacusDbModel.Program">
-              <MappingFragment StoreEntitySet="Programs">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="IdCode" ColumnName="IdCode" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Ranks">
             <EntityTypeMapping TypeName="AbacusDbModel.Rank">
               <MappingFragment StoreEntitySet="Ranks">
@@ -2523,90 +641,6 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Roles">
-            <EntityTypeMapping TypeName="AbacusDbModel.Role">
-              <MappingFragment StoreEntitySet="Roles">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="States">
-            <EntityTypeMapping TypeName="AbacusDbModel.State">
-              <MappingFragment StoreEntitySet="States">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Suburbs">
-            <EntityTypeMapping TypeName="AbacusDbModel.Suburb">
-              <MappingFragment StoreEntitySet="Suburbs">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TypeOfRequests">
-            <EntityTypeMapping TypeName="AbacusDbModel.TypeOfRequest">
-              <MappingFragment StoreEntitySet="TypeOfRequests">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utContactLogs">
-            <EntityTypeMapping TypeName="AbacusDbModel.utContactLog">
-              <MappingFragment StoreEntitySet="utContactLog">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utContentSearches">
-            <EntityTypeMapping TypeName="AbacusDbModel.utContentSearch">
-              <MappingFragment StoreEntitySet="utContentSearch">
-                <ScalarProperty Name="nodeID" ColumnName="nodeID" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="docAlias" ColumnName="docAlias" />
-                <ScalarProperty Name="synopsis" ColumnName="synopsis" />
-                <ScalarProperty Name="content" ColumnName="content" />
-                <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utCustomers">
-            <EntityTypeMapping TypeName="AbacusDbModel.utCustomer">
-              <MappingFragment StoreEntitySet="utCustomer">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
-                <ScalarProperty Name="DeliveryAddressLine1" ColumnName="DeliveryAddressLine1" />
-                <ScalarProperty Name="DeliveryAddressLine2" ColumnName="DeliveryAddressLine2" />
-                <ScalarProperty Name="DeliveryCity" ColumnName="DeliveryCity" />
-                <ScalarProperty Name="DeliveryPostcode" ColumnName="DeliveryPostcode" />
-                <ScalarProperty Name="DeliveryCountry" ColumnName="DeliveryCountry" />
-                <ScalarProperty Name="BillingName" ColumnName="BillingName" />
-                <ScalarProperty Name="BillingAddressLine1" ColumnName="BillingAddressLine1" />
-                <ScalarProperty Name="BillingAddressLine2" ColumnName="BillingAddressLine2" />
-                <ScalarProperty Name="BillingCity" ColumnName="BillingCity" />
-                <ScalarProperty Name="BillingPostcode" ColumnName="BillingPostcode" />
-                <ScalarProperty Name="BillingCountry" ColumnName="BillingCountry" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2679,35 +713,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="utOrderStatusChangeLogs">
-            <EntityTypeMapping TypeName="AbacusDbModel.utOrderStatusChangeLog">
-              <MappingFragment StoreEntitySet="utOrderStatusChangeLog">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-                <ScalarProperty Name="Value" ColumnName="Value" />
-                <ScalarProperty Name="Initiator" ColumnName="Initiator" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utPromoCodes">
-            <EntityTypeMapping TypeName="AbacusDbModel.utPromoCode">
-              <MappingFragment StoreEntitySet="utPromoCode">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
-                <ScalarProperty Name="DiscountPercentage" ColumnName="DiscountPercentage" />
-                <ScalarProperty Name="DateValidFrom" ColumnName="DateValidFrom" />
-                <ScalarProperty Name="DateValidTo" ColumnName="DateValidTo" />
-                <ScalarProperty Name="IsSingleUse" ColumnName="IsSingleUse" />
-                <ScalarProperty Name="SchoolCode" ColumnName="SchoolCode" />
-                <ScalarProperty Name="IsDisabled" ColumnName="IsDisabled" />
-                <ScalarProperty Name="QualifierProductID" ColumnName="QualifierProductID" />
-                <ScalarProperty Name="QualifierProductQty" ColumnName="QualifierProductQty" />
-                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="utSchools">
             <EntityTypeMapping TypeName="AbacusDbModel.utSchool">
               <MappingFragment StoreEntitySet="utSchool">
@@ -2738,18 +743,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="utSchoolGalleryImages">
-            <EntityTypeMapping TypeName="AbacusDbModel.utSchoolGalleryImage">
-              <MappingFragment StoreEntitySet="utSchoolGalleryImage">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Caption" ColumnName="Caption" />
-                <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
-                <ScalarProperty Name="Priority" ColumnName="Priority" />
-                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
-                <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="utSchoolNames">
             <EntityTypeMapping TypeName="AbacusDbModel.utSchoolName">
               <MappingFragment StoreEntitySet="utSchoolNames">
@@ -2762,29 +755,6 @@
                 <ScalarProperty Name="ContactName" ColumnName="ContactName" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utSchoolUsers">
-            <EntityTypeMapping TypeName="AbacusDbModel.utSchoolUser">
-              <MappingFragment StoreEntitySet="utSchoolUser">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utSendToFriendLogs">
-            <EntityTypeMapping TypeName="AbacusDbModel.utSendToFriendLog">
-              <MappingFragment StoreEntitySet="utSendToFriendLog">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="EmailFrom" ColumnName="EmailFrom" />
-                <ScalarProperty Name="EmailTo" ColumnName="EmailTo" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
-                <ScalarProperty Name="URL" ColumnName="URL" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2803,25 +773,6 @@
           <EntitySetMapping Name="utShoppingCartItems">
             <EntityTypeMapping TypeName="AbacusDbModel.utShoppingCartItem">
               <MappingFragment StoreEntitySet="utShoppingCartItem">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="ShoppingCartId" ColumnName="ShoppingCartId" />
-                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
-                <ScalarProperty Name="ItemType" ColumnName="ItemType" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
-                <ScalarProperty Name="CustomText" ColumnName="CustomText" />
-                <ScalarProperty Name="CustomImageSrc" ColumnName="CustomImageSrc" />
-                <ScalarProperty Name="CustomImageAttributes" ColumnName="CustomImageAttributes" />
-                <ScalarProperty Name="CustomImageSrc2" ColumnName="CustomImageSrc2" />
-                <ScalarProperty Name="CustomImageAttributes2" ColumnName="CustomImageAttributes2" />
-                <ScalarProperty Name="Rnd" ColumnName="Rnd" />
-                <ScalarProperty Name="SubmitPhoto" ColumnName="SubmitPhoto" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="utShoppingCartItemBackups">
-            <EntityTypeMapping TypeName="AbacusDbModel.utShoppingCartItemBackup">
-              <MappingFragment StoreEntitySet="utShoppingCartItemBackup">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ShoppingCartId" ColumnName="ShoppingCartId" />
                 <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
@@ -2886,22 +837,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="ProductMarketingJobs" TypeName="AbacusDbModel.ProductMarketingJobs" StoreEntitySet="ProductMarketingJobs">
-            <EndProperty Name="MarketingJobs">
-              <ScalarProperty Name="Id" ColumnName="MarketingJob_Id" />
-            </EndProperty>
-            <EndProperty Name="Products">
-              <ScalarProperty Name="Id" ColumnName="Product_Id" />
-            </EndProperty>
-          </AssociationSetMapping>
-          <AssociationSetMapping Name="TypeOfRequestPrograms" TypeName="AbacusDbModel.TypeOfRequestPrograms" StoreEntitySet="TypeOfRequestPrograms">
-            <EndProperty Name="Programs">
-              <ScalarProperty Name="Id" ColumnName="Program_Id" />
-            </EndProperty>
-            <EndProperty Name="TypeOfRequests">
-              <ScalarProperty Name="Id" ColumnName="TypeOfRequest_Id" />
-            </EndProperty>
-          </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="getOrderItemsForProcessing" FunctionName="AbacusDbModel.Store.getOrderItemsForProcessing">
             <ResultMapping>
               <ComplexTypeMapping TypeName="AbacusDbModel.getOrderItemsForProcessing_Result">
@@ -2975,6 +910,21 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="OrdersChangeLogs">
+            <EntityTypeMapping TypeName="AbacusDbModel.OrdersChangeLog">
+              <MappingFragment StoreEntitySet="OrdersChangeLog">
+                <ScalarProperty Name="NewRoom" ColumnName="NewRoom" />
+                <ScalarProperty Name="OldRoom" ColumnName="OldRoom" />
+                <ScalarProperty Name="NewSchoolCode" ColumnName="NewSchoolCode" />
+                <ScalarProperty Name="OldSchoolCode" ColumnName="OldSchoolCode" />
+                <ScalarProperty Name="NewQuantity" ColumnName="NewQuantity" />
+                <ScalarProperty Name="OldQuantity" ColumnName="OldQuantity" />
+                <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+                <ScalarProperty Name="ImageId" ColumnName="ImageId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -2989,7 +939,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderChangeLog.cs" />
     <Compile Include="OrderInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="School.cs" />

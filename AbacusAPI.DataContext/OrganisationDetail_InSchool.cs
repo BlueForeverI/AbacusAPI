@@ -17,8 +17,5 @@ namespace AbacusAPI.DataContext
         public long Id { get; set; }
         public Nullable<int> CurrentSupplierCalendar_Id { get; set; }
         public Nullable<int> Organisation_Id { get; set; }
-    
-        public virtual Organisation Organisation { get; set; }
-        public virtual Organisation Organisation1 { get; set; }
     }
 }

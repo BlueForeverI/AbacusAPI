@@ -28,48 +28,19 @@ namespace AbacusAPI.DataContext
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<AbacusCode> AbacusCodes { get; set; }
-        public DbSet<Address> Addresses { get; set; }
-        public DbSet<Building> Buildings { get; set; }
-        public DbSet<City> Cities { get; set; }
-        public DbSet<Comment> Comments { get; set; }
-        public DbSet<ContactRole> ContactRoles { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
-        public DbSet<ContactTitle> ContactTitles { get; set; }
-        public DbSet<Conversation> Conversations { get; set; }
-        public DbSet<Country> Countries { get; set; }
         public DbSet<Decile> Deciles { get; set; }
-        public DbSet<InvoiceTotal> InvoiceTotals { get; set; }
-        public DbSet<JobDescription> JobDescriptions { get; set; }
-        public DbSet<MarketingJob> MarketingJobs { get; set; }
-        public DbSet<OrganisationContact> OrganisationContacts { get; set; }
         public DbSet<OrganisationDetail_InSchool> OrganisationDetail_InSchool { get; set; }
-        public DbSet<Organisation> Organisations { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Program> Programs { get; set; }
         public DbSet<Rank> Ranks { get; set; }
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<State> States { get; set; }
-        public DbSet<Suburb> Suburbs { get; set; }
-        public DbSet<TypeOfRequest> TypeOfRequests { get; set; }
-        public DbSet<utContactLog> utContactLogs { get; set; }
-        public DbSet<utContentSearch> utContentSearches { get; set; }
-        public DbSet<utCustomer> utCustomers { get; set; }
         public DbSet<utOrder> utOrders { get; set; }
         public DbSet<utOrderItem> utOrderItems { get; set; }
-        public DbSet<utOrderStatusChangeLog> utOrderStatusChangeLogs { get; set; }
-        public DbSet<utPromoCode> utPromoCodes { get; set; }
         public DbSet<utSchool> utSchools { get; set; }
-        public DbSet<utSchoolGalleryImage> utSchoolGalleryImages { get; set; }
         public DbSet<utSchoolName> utSchoolNames { get; set; }
-        public DbSet<utSchoolUser> utSchoolUsers { get; set; }
-        public DbSet<utSendToFriendLog> utSendToFriendLogs { get; set; }
         public DbSet<utShoppingCart> utShoppingCarts { get; set; }
         public DbSet<utShoppingCartItem> utShoppingCartItems { get; set; }
-        public DbSet<utShoppingCartItemBackup> utShoppingCartItemBackups { get; set; }
         public DbSet<utSPImage> utSPImages { get; set; }
         public DbSet<utSPOrder> utSPOrders { get; set; }
         public DbSet<utSPReorderItem> utSPReorderItems { get; set; }
+        public DbSet<OrdersChangeLog> OrdersChangeLogs { get; set; }
     
         public virtual ObjectResult<getOrderItemsForProcessing_Result> getOrderItemsForProcessing()
         {

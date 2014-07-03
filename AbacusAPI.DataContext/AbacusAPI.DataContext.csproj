@@ -46,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbacusCode.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="AbacusEntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,68 +61,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AbacusEntityModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Address.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Building.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="City.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Comment.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactRole.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactTitle.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Conversation.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Country.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Decile.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="getOrderItemsForProcessing_Result.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="InvoiceTotal.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="JobDescription.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MarketingJob.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Organisation.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrganisationContact.cs">
+    <Compile Include="OrdersChangeLog.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="OrganisationDetail_InSchool.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rank.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Role.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
@@ -134,28 +83,10 @@
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="State.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Suburb.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TypeOfRequest.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="usp_schoolNameSearch_Result.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="usp_utContentSearch_Result.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utContactLog.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utContentSearch.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utCustomer.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="utOrder.cs">
@@ -164,34 +95,16 @@
     <Compile Include="utOrderItem.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="utOrderStatusChangeLog.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utPromoCode.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="utSchool.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="utSchoolGalleryImage.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="utSchoolName.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utSchoolUser.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utSendToFriendLog.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="utShoppingCart.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="utShoppingCartItem.cs">
-      <DependentUpon>AbacusEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="utShoppingCartItemBackup.cs">
       <DependentUpon>AbacusEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="utSPImage.cs">
