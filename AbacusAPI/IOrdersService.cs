@@ -28,6 +28,9 @@ namespace AbacusAPI
         IEnumerable<OrderInfo> GetOrdersGoodAndYellow();
 
         [OperationContract]
+        IEnumerable<OrderInfo> GetOrdersWithNoPicture();
+        
+        [OperationContract]
         IEnumerable<OrderInfo> SearchOrders(string searchText);
 
         [OperationContract]

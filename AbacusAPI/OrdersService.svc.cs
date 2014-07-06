@@ -43,6 +43,12 @@ namespace AbacusAPI
             return repo.GetOrdersGoodAndYellow();
         }
 
+        public IEnumerable<OrderInfo> GetOrdersWithNoPicture()
+        {
+            var repo = new OrderInfoRepository();
+            return repo.GetOrdersWithNoPicture();
+        }
+
         public IEnumerable<OrderInfo> SearchOrders(string searchText)
         {
             var repo = new OrderInfoRepository();

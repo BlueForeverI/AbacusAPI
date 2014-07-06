@@ -69,6 +69,12 @@ namespace AbacusAPI.Repositories
                 .Where(o => !(o.Calcs == 0 && o.Cards == 0 && o.Diary == 0));
         }
 
+
+        public IQueryable<OrderInfo> GetOrdersWithNoPicture()
+        {
+            return GetOrders("oi.Id IS NULL");
+        }
+
         public IEnumerable<OrderInfo> SearchOrders(string searchText)
         {
             return GetAllOrders()
@@ -321,5 +327,6 @@ namespace AbacusAPI.Repositories
                                                                 }).ToList();
             }
         }
+
     }
 }
